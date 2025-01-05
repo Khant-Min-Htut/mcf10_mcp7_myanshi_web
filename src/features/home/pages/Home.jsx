@@ -4,15 +4,17 @@ import PromotionsSection from "../components/PromotionsSection";
 import AboutUsSection from "../components/AboutUsSection";
 import TiktokSection from "../components/TiktokSection";
 import FOLLOW_US_Section from "../components/FOLLOW_US_Section";
+import HeroSection from "../../../components/HeroSection";
 
 const Home = () => {
-  return <div>
+  return <>
+    <HeroSection isHomePage={true} title={"Fresh, Flavorful Sushi, Only in Myanmar"}/>
     <BrowseMenuSection/>
     <PromotionsSection/>
     <AboutUsSection/>
     <FOLLOW_US_Section/>
     <TiktokSection/>
-  </div>;
+  </>;
 };
 
 export default Home;
