@@ -16,6 +16,7 @@ export default {
         "stroke-1-color": "#F8E2DE",
         "stroke-2-color": "#F4CEC8",
         "header-color": "#010102", // black
+        "back-ground-color":"#FDF5F4"
       },
       neutral: {
         800: "#000000",

@@ -5,13 +5,13 @@ import Footer from "./Footer";
 
 const Layout = () => {
   return (
-    <>
+    <div className=" max-w-[1440px] mx-auto w-full">
       <Header />
-      <main className="max-w-[1200px] mx-auto px-4 py-6">
+      <main className="max-w-[1440px] mx-auto bg-back-ground-color">
         <Outlet />
       </main>
       <Footer />
-    </>
+    </div>
   );
 };
 
