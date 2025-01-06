@@ -43,17 +43,17 @@ const OurTeam = () => {
                   <img
                     src={facebook}
                     alt={"facebook"}
-                    className="size-6 object-cover rounded-full"
+                    className="size-6 sm:size-7 lg:size-8 object-cover rounded-full"
                   />
                   <img
                     src={tiktok}
                     alt={"facebook"}
-                    className="size-6 object-cover rounded-full"
+                    className="size-6 sm:size-7 lg:size-8 object-cover rounded-full"
                   />
                   <img
                     src={youtube}
                     alt={"facebook"}
-                    className="size-6 object-cover rounded-full"
+                    className="size-6 sm:size-7 lg:size-8 object-cover rounded-full"
                   />
                 </div>
               </div>
