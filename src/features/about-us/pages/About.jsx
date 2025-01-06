@@ -1,7 +1,10 @@
 import React from "react";
+import HeroSection from "../../../components/HeroSection";
 
 const About = () => {
-  return <div>About</div>;
+  return <div>
+    <HeroSection isBreadCrumb={true}  currentPage="About Us" title="We are MYANSHI"/>
+  </div>;
 };
 
 export default About;
