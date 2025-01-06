@@ -36,23 +36,23 @@ export default function Footer() {
         </div>
 
         <div>
-          <h3 className="text-neutral-100 font-satoshi font-semibold text-base lg:text-lg mb-4">
+          <h3 className="text-neutral-100 font-satoshi mt-1 font-semibold text-base lg:text-lg mb-4">
             OPENING TIMES
           </h3>
           <div className="space-y-2">
-            <div className="flex justify-between">
-              <span className="font-satoshi text-neutral-200 font-medium text-sm lg:text-base">
+            <div className="flex">
+              <span className="font-satoshi text-neutral-200 font-medium text-sm mr-6 lg:text-base">
                 Monday - Friday
               </span>
               <span className="text-neutral-400 text-sm lg:text-base">
                 5:00pm - 9:00pm
               </span>
             </div>
-            <div className="flex justify-between">
-              <span className="font-satoshi text-neutral-200 font-medium text-sm lg:text-base">
+            <div className="flex">
+              <span className="font-satoshi text-neutral-200 mr-6 font-medium text-sm lg:text-base">
                 Saturday - Sunday
               </span>
-              <span className="text-neutral-400 text-sm lg:text-base">
+              <span className="text-neutral-400  text-sm lg:text-base">
                 9:00am - 12:00pm
               </span>
             </div>
