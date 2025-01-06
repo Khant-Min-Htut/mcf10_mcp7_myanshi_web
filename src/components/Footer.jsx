@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 export default function Footer() {
   return (
     <footer className="mt-auto bg-header-color text-white">
-      <div className="py-16 px-4 mx-auto grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 md:px-8 lg:py-32">
+      <div className="py-16 px-4 mx-auto grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 md:px-8 lg:py-32">
         <div className="space-y-4 ">
           <div className="flex items-center space-x-2">
             <SushiIcon />
@@ -138,7 +138,7 @@ export default function Footer() {
 
       <div className="bg-neutral-700 text-white px-4 py-4 md:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
-          <span>©2024 - MOFI | All rights reserved</span>
+          <span>©2024 - MCP7 | All rights reserved</span>
           <span>MISIT PUD</span>
         </div>
       </div>
