@@ -2,9 +2,9 @@ import React from "react";
 import BrowseMenuSection from "../components/BrowseMenuSection";
 import PromotionsSection from "../components/PromotionsSection";
 import AboutUsSection from "../components/AboutUsSection";
-import TiktokSection from "../components/TiktokSection";
 import FOLLOW_US_Section from "../components/FOLLOW_US_Section";
-import HeroSection from "../../../components/HeroSection";
+import HeroSection from "../../../components/sectionComponents/HeroSection";
+import HomePageTikTokSection from "../components/HomePageTikTokSection";
 
 const Home = () => {
   return <>
@@ -13,7 +13,7 @@ const Home = () => {
     <PromotionsSection/>
     <AboutUsSection/>
     <FOLLOW_US_Section/>
-    <TiktokSection/>
+    <HomePageTikTokSection/>
   </>;
 };
 

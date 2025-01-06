@@ -34,10 +34,10 @@ const BrowseMenuSection = () => {
     },
   ];
   return (
-    <section className=" relative">
-      <div className=" z-10">
+    <section className=" relative max-h-[1306px] min-h-[1076px]  flex items-center justify-center">
+      <div className=" z-10 ">
         <Container>
-          <div className="min-h-screen flex items-center ">
+          <div className=" flex items-center">
             <div className=" grid grid-flow-col grid-cols-2 max-[843px]:grid-cols-1 max-[843px]:grid-flow-row max-[1200px]:px-4 gap-4  items-start ">
               <div className=" col-span-1 flex flex-col gap-6 ">
                 <h2 className=" text-bodyLarge font-satoshi text-primary-color">
@@ -62,7 +62,7 @@ const BrowseMenuSection = () => {
                   >
                     <motion.div
                       whileHover={{ x: 5 }}
-                      className=" flex justify-between h-[100px] hover:ms-2"
+                      className=" flex justify-between h-[110px] hover:ms-2"
                     >
                       <div className=" flex gap-4">
                         <div className=" h-full flex items-start pt-1 ">
