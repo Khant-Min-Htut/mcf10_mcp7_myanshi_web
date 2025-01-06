@@ -1,6 +1,6 @@
 import React from "react";
 import HeroSection from "../../../components/sectionComponents/HeroSection";
-import HeroSection from "../../../components/HeroSection";
+// import HeroSection from "../../../components/HeroSection";
 import { useMediaQuery } from "../../../hooks/useMediaQuery";
 import AboutUs from "../components/AboutUs";
 import Hero from "../components/Hero";
