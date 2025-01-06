@@ -25,12 +25,12 @@ const MyJourney = () => {
         <img
           src={imageOne}
           alt="chief image"
-          className="size-full row-start-1 row-end-9"
+          className="size-full sm:row-start-1 sm:row-end-9"
         />
         <img
           src={imageTwo}
           alt="sushi image"
-          className="size-full row-start-2 row-end-10"
+          className="size-full sm:row-start-2 sm:row-end-10"
         />
       </div>
     </div>
