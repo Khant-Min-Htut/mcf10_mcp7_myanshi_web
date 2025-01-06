@@ -1,7 +1,7 @@
 import React from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const NavigationButtons = () => {
+const NavigationBtn = () => {
   return (
     <div className="flex gap-2">
       <button
@@ -20,4 +20,4 @@ const NavigationButtons = () => {
   );
 };
 
-export default NavigationButtons;
+export default NavigationBtn;

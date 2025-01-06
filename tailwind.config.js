@@ -17,8 +17,9 @@ export default {
         "stroke-2-color": "#F4CEC8",
         "header-color": "#010102", // black
       },
+      // Neutral Colors
       neutral: {
-        800: "#000000",
+        800: "#000000", //black
         700: "#292929",
         600: "#686868",
         500: "#A0A0A0",
@@ -37,6 +38,8 @@ export default {
         heading1: ["40px", { lineHeight: "48px" }],
         heading2: ["32px", { lineHeight: "40px" }],
         heading3: ["28px", { lineHeight: "40px" }],
+        headingF: ["25px", { lineHeight: "40px" }],
+
         heading4: ["16px", { lineHeight: "auto" }],
         heading3_500: ["24px", { lineHeight: "auto" }],
         heading5: ["18px", { lineHeight: "auto" }],
