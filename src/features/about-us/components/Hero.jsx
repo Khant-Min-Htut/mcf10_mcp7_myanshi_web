@@ -2,18 +2,21 @@ import sushi from "../../../assets/ShushiIcon.png";
 
 const Hero = () => {
   return (
-    <div className="border-b-2 border-stroke-1-color px-3">
+    <div className="grid gap-10  px-3 sm:max-w-[75%] sm:mx-auto lg:grid-cols-3 lg:gap-5 lg:py-20">
       {heroData.map((item, index) => (
-        <div
-          className={`flex gap-6 mb-10 ${
-            heroData.length - 1 === index && "mb-28"
-          }`}
-          key={index}
-        >
-          <img src={item.image} alt={item.title} className="size-10" />
+        <div className="flex gap-6" key={index}>
+          <img
+            src={item.image}
+            alt={item.title}
+            className="size-10 sm:size-11"
+          />
           <div>
-            <h2 className="text-heading3 font-notoSerifJp">{item.title}</h2>
-            <p className="text-neutral-500">{item.description}</p>
+            <h2 className="text-heading3 sm:text-heading2 font-notoSerifJp ">
+              {item.title}
+            </h2>
+            <p className="text-neutral-500 sm:text-bodyDefault">
+              {item.description}
+            </p>
           </div>
         </div>
       ))}
