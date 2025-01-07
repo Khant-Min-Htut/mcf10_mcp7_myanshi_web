@@ -7,19 +7,17 @@ import Img3 from "../../assets/MyanShi/OurTitok/titokImg3.png";
 import Img4 from "../../assets/MyanShi/OurTitok/titokImg4.png";
 import Img5 from "../../assets/MyanShi/OurTitok/titokImg5.png";
 import { img } from "framer-motion/m";
+import JapaneseText from "../typography/JapaneseText";
+import PrimaryHeader from "../typography/PrimaryHeader";
 
 const TiktokSection = () => {
   return (
-    <section className=" min-h-[1242px] max-[843px]:min-h-[896px] max-[400px]:min-h-[1180px]  flex items-center max-[1200px]:px-2">
+    <section className=" py-[180px] max-[843px]:py-[120px] border-y border-stroke-1-color max-[1200px]:px-2 ">
       <Container>
-        <div className=" min-h-[882px] h-full w-full  flex flex-col justify-center items-center gap-10">
+        <div className=" min-h-[882px] h-full w-full  flex flex-col justify-center items-center gap-10 ">
           <div className=" text-center flex flex-col gap-6 ">
-            <h2 className=" text-bodyLarge font-satoshi text-primary-color">
-              カスタマーレビュー
-            </h2>
-            <h1 className=" max-[400px]:text-heading2  max-[843px]:text-display4 text-display2 font-notoSerifJp text-neutral-800">
-              Our Tiktok
-            </h1>
+            <JapaneseText>カスタマーレビュー</JapaneseText>
+            <PrimaryHeader>Our Tiktok</PrimaryHeader>
           </div>
 
           <div className="grid grid-cols-2  gap-2 max-[400px]:grid-cols-1 ">
@@ -56,7 +54,3 @@ const TiktokSection = () => {
 };
 
 export default TiktokSection;
-
-{
-  /* */
-}
