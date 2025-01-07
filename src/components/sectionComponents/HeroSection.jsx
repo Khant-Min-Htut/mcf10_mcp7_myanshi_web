@@ -5,12 +5,6 @@ import AnimatedButton from "../../buttons/AnimatedButton";
 import BreadCrumb from "../BreadCrumb";
 import SolidBtn from "../../buttons/SolidBtn";
 import OutLineBtn from "../../buttons/OutLineBtn";
-import Imgs from "../features/home/data/Imgs";
-import CoverImg from "../assets/MyanShi/AboutUs/aboutHeroImg.jpg";
-import AnimatedButton from "../buttons/AnimatedButton";
-import BreadCrumb from "./BreadCrumb";
-import SolidBtn from "../buttons/SolidBtn";
-import OutLineBtn from "../buttons/OutLineBtn";
 
 const HeroSection = ({ isBreadCrumb, isHomePage, currentPage, title }) => {
   const { HeroSectionImg } = Imgs();
