@@ -28,7 +28,7 @@ const VisitDesktop = () => {
   }, []);
 
   return (
-    <div className="border-b-2 border-stroke-1-color px-3 lg:pt-10">
+    <div className="px-3 lg:pt-10">
       <div className="flex justify-between items-end">
         <div>
           <h2 className="font-satoshi sm:text-bodyLarge text-bodyDefault text-primary-color">

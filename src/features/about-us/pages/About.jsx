@@ -1,6 +1,8 @@
 import React from "react";
 import HeroSection from "../../../components/sectionComponents/HeroSection";
 // import HeroSection from "../../../components/HeroSection";
+import Container from "../../../components/Container";
+import HeroSection from "../../../components/HeroSection";
 import { useMediaQuery } from "../../../hooks/useMediaQuery";
 import AboutUs from "../components/AboutUs";
 import Hero from "../components/Hero";
@@ -21,13 +23,27 @@ const About = () => {
         title="We are MYANSHI"
       />
       <div className="space-y-28 py-28">
-        <Hero />
+        <Container>
+          <Hero />
+        </Container>
         <hr className="border-b-2 border-stroke-1-color" />
-        <AboutUs />
-        <MyJourney />
-        <OurTeam />
-        {isDesktop ? <VisitDesktop /> : <Visit />}
-        <OurTiktok />
+        <Container>
+          <AboutUs />
+        </Container>
+        <hr className="border-b-2 border-stroke-1-color" />
+        <Container>
+          <MyJourney />
+        </Container>
+        <hr className="border-b-2 border-stroke-1-color" />
+        <Container>
+          <OurTeam />
+        </Container>
+        <hr className="border-b-2 border-stroke-1-color" />
+        <Container>{isDesktop ? <VisitDesktop /> : <Visit />}</Container>
+        <hr className="border-b-2 border-stroke-1-color" />
+        <Container>
+          <OurTiktok />
+        </Container>
       </div>
     </section>
   );
