@@ -43,25 +43,31 @@ const Dropdown = () => {
             href="/"
             className="font-satoshi text-heading4  relative text-white after:content-[''] after:absolute after:left-0 after:-bottom-1.5 after:h-[2px] after:w-0 after:bg-red-500 after:transition-all hover:after:w-full"
           >
-            Home
-          </a>
-          <a
-            href="/menu"
-            className="font-satoshi text-heading4  relative text-white after:content-[''] after:absolute after:left-0 after:-bottom-1.5 after:h-[2px] after:w-0 after:bg-red-500 after:transition-all hover:after:w-full"
-          >
-            Menu
+            HOME
           </a>
           <a
             href="/about"
             className="font-satoshi text-heading4  relative text-white after:content-[''] after:absolute after:left-0 after:-bottom-1.5 after:h-[2px] after:w-0 after:bg-red-500 after:transition-all hover:after:w-full"
           >
-            About Us
+            ABOUT
+          </a>
+          <a
+            href="/menu"
+            className="font-satoshi text-heading4  relative text-white after:content-[''] after:absolute after:left-0 after:-bottom-1.5 after:h-[2px] after:w-0 after:bg-red-500 after:transition-all hover:after:w-full"
+          >
+            MENU
           </a>
           <a
             href="/contact"
             className="font-satoshi text-heading4  relative text-white after:content-[''] after:absolute after:left-0 after:-bottom-1.5 after:h-[2px] after:w-0 after:bg-red-500 after:transition-all hover:after:w-full"
           >
-            Contact
+            CONTACT
+          </a>{" "}
+          <a
+            href="/blog"
+            className="font-satoshi text-heading4  relative text-white after:content-[''] after:absolute after:left-0 after:-bottom-1.5 after:h-[2px] after:w-0 after:bg-red-500 after:transition-all hover:after:w-full"
+          >
+            BLOG
           </a>
           <a href="">
             <CallNowBtn text="CALL NOW" />
@@ -75,25 +81,32 @@ const Dropdown = () => {
             href="/"
             className="block font-satoshi text-heading4  relative text-white after:content-[''] after:absolute after:left-0 after:-bottom-1.5 after:h-[2px] after:w-0 after:bg-red-500 after:transition-all hover:after:w-14"
           >
-            Home
+            HOME
+          </a>
+          <a
+            href="/about"
+            className="block font-satoshi text-heading4  relative text-white after:content-[''] after:absolute after:left-0 after:-bottom-1.5 after:h-[2px] after:w-0 after:bg-red-500 after:transition-all hover:after:w-16"
+          >
+            ABOUT
           </a>
           <a
             href="/menu"
             className="block font-satoshi text-heading4  relative text-white after:content-[''] after:absolute after:left-0 after:-bottom-1.5 after:h-[2px] after:w-0 after:bg-red-500 after:transition-all hover:after:w-14"
           >
-            Menu
+            MENU
           </a>
-          <a
-            href="/about"
-            className="block font-satoshi text-heading4  relative text-white after:content-[''] after:absolute after:left-0 after:-bottom-1.5 after:h-[2px] after:w-0 after:bg-red-500 after:transition-all hover:after:w-20"
-          >
-            About Us
-          </a>
+
           <a
             href="/contact"
-            className="block  font-satoshi text-heading4  relative text-white after:content-[''] after:absolute after:left-0 after:-bottom-1.5 after:h-[2px] after:w-0 after:bg-red-500 after:transition-all hover:after:w-16"
+            className="block  font-satoshi text-heading4  relative text-white after:content-[''] after:absolute after:left-0 after:-bottom-1.5 after:h-[2px] after:w-0 after:bg-red-500 after:transition-all hover:after:w-20"
           >
-            Contact
+            CONTACT
+          </a>
+          <a
+            href="/blog"
+            className="block  font-satoshi text-heading4  relative text-white after:content-[''] after:absolute after:left-0 after:-bottom-1.5 after:h-[2px] after:w-0 after:bg-red-500 after:transition-all hover:after:w-12"
+          >
+            BLOG
           </a>
           <CallNowBtn text="CALL NOW" />
         </div>
