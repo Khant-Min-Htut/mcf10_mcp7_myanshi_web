@@ -3,7 +3,7 @@ import imageOne from "../../../assets/MyanShi/AboutUs/MyanshiJourney-2.jpg";
 
 const MyJourney = () => {
   return (
-    <div className="border-b-2 border-stroke-1-color pb-28 px-3 flex flex-col lg:flex-row gap-20 lg:gap-12 lg:pt-20 lg:pb-36">
+    <div className=" pb-28 px-3 flex flex-col lg:flex-row gap-20 lg:gap-12 lg:pt-20 lg:pb-36">
       <div className="lg:max-w-[39%]">
         <h2 className="font-satoshi text-bodyDefault text-primary-color sm:text-bodyLarge ">
           伝統から食卓へ

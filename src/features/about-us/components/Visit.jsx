@@ -28,7 +28,7 @@ const Visit = () => {
   }, []);
 
   return (
-    <div className="border-b-2 border-stroke-1-color pb-28 px-3">
+    <div className=" pb-28 px-3">
       <h2 className="font-satoshi text-bodyDefault text-primary-color">
         レストラン
       </h2>

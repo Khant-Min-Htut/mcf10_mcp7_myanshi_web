@@ -5,7 +5,7 @@ import imageTwo from "../../../assets/MyanShi/AboutUs/restaurant-image-2.png";
 
 const AboutUs = () => {
   return (
-    <div className="px-3 border-b-2 border-stroke-1-color pb-28 grid lg:grid-cols-2 lg:pt-20 lg:pb-36">
+    <div className="px-3  pb-28 grid lg:grid-cols-2 lg:pt-20 lg:pb-36">
       <div className="grid gap-4 sm:grid-rows-5 sm:grid-cols-4 sm:h-[670px] lg:h-[600px] relative">
         <img
           src={imageOne}
