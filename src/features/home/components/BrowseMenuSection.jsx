@@ -1,6 +1,5 @@
 import React from "react";
 import SolidBtn from "../../../buttons/SolidBtn";
-import { CiCircleChevRight } from "react-icons/ci";
 import { motion } from "framer-motion";
 import { GoChevronRight } from "react-icons/go";
 import Container from "../../../components/Container";
