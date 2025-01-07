@@ -6,6 +6,9 @@ import { GoChevronRight } from "react-icons/go";
 import Container from "../../../components/Container";
 import SushiIcon from "../../../assets/MyanShi/Home/myanshi_logo.png";
 import Imgs from "../data/Imgs";
+import JapaneseText from "../../../components/typography/JapaneseText";
+import PrimaryHeader from "../../../components/typography/PrimaryHeader";
+import Paragraph from "../../../components/typography/Paragraph";
 
 const BrowseMenuSection = () => {
   const { bg_img } = Imgs();
@@ -40,17 +43,13 @@ const BrowseMenuSection = () => {
           <div className=" flex items-center">
             <div className=" grid grid-flow-col grid-cols-2 max-[843px]:grid-cols-1 max-[843px]:grid-flow-row max-[1200px]:px-4 gap-4  items-start ">
               <div className=" col-span-1 flex flex-col gap-6 ">
-                <h2 className=" text-bodyLarge font-satoshi text-primary-color">
-                  メニュー
-                </h2>
-                <h1 className=" max-[400px]:text-heading2  max-[843px]:text-display4 text-display2 font-notoSerifJp text-neutral-800">
-                  Browse Menu
-                </h1>
-                <p className=" max-[400px]:text-bodySmall max-[843px]:text-bodyDefault font-satoshi text-neutral-600">
+                <JapaneseText>メニュー</JapaneseText>
+                <PrimaryHeader>Browse Menu</PrimaryHeader>
+                <Paragraph>
                   Discover our selection of authentic Japanese flavors, from
                   fresh sushi to savory dishes, refreshing drinks, and
                   delightful desserts.
-                </p>
+                </Paragraph>
                 <SolidBtn text="SEE MORE" />
               </div>
               <div className=" col-span-1">
@@ -74,10 +73,10 @@ const BrowseMenuSection = () => {
                         </div>
                         <div>
                           <h1 className=" text-heading1 max-[400px]:text-heading3_500 font-notoSerifJp text-neutral-800">
-                            Sushi
+                            {i.title}
                           </h1>
                           <p className=" text-bodyDefault max-[400px]:text-bodySmall font-satoshi text-neutral-600">
-                            Fresh and handcrafted sushi, inspired by tradition.
+                            {i.description}
                           </p>
                         </div>
                       </div>

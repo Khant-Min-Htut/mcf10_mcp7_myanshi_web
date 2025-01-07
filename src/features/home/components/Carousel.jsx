@@ -27,6 +27,10 @@ const Carousel = ({ menuItems, cardsPerView = 3 }) => {
     }
   };
 
+  setTimeout(() => {
+    nextSlide();
+  }, 3000);
+
   return (
     <div className="flex flex-col gap-12 w-full">
       <div className="flex relative">
