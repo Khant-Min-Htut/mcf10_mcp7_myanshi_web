@@ -7,7 +7,7 @@ import youtube from "../../../assets/MyanShi/AboutUs/youtube-logo.svg";
 
 const OurTeam = () => {
   return (
-    <div className="border-b-2 border-stroke-1-color pb-28 lg:pt-20 lg:pb-36">
+    <div className=" pb-28 lg:pt-20 lg:pb-36">
       <div className="text-center">
         <h2 className="font-satoshi font-medium text-bodyDefault text-primary-color">
           チーム
