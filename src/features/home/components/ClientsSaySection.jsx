@@ -1,8 +1,11 @@
 import React from 'react'
+import ClientFeedbackSection from '../../../components/sectionComponents/ClientFeedbackSection'
 
 const ClientsSaySection = () => {
   return (
-    <div>ClientsSaySection</div>
+    <div>
+      <ClientFeedbackSection/>
+    </div>
   )
 }
 

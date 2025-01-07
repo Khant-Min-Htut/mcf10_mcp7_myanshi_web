@@ -5,51 +5,28 @@ import { GoChevronRight } from "react-icons/go";
 import Container from "../../../components/Container";
 import SushiIcon from "../../../assets/MyanShi/Home/myanshi_logo.png";
 import Imgs from "../data/Imgs";
+import JapaneseText from "../../../components/typography/JapaneseText";
+import PrimaryHeader from "../../../components/typography/PrimaryHeader";
+import Paragraph from "../../../components/typography/Paragraph";
+import SecondaryHeader from "../../../components/typography/SecondaryHeader";
+import RoundedBtn from "../../../buttons/RoundedBtn";
 
 const BrowseMenuSection = () => {
   const { bg_img } = Imgs();
-  const data = [
-    {
-      key: 1,
-      title: "Sushi",
-      description: "Fresh and handcrafted sushi, inspired by tradition.",
-    },
-    {
-      key: 2,
-      title: "Dishes",
-      description:
-        "Delicious, hearty dishes that bring the true taste of Japan to your table.",
-    },
-    {
-      key: 3,
-      title: "Drinks",
-      description:
-        "Refreshing drinks to enhance your meal, from classic teas to vibrant cocktails.",
-    },
-    {
-      key: 4,
-      title: "Desserts",
-      description: "Sweet traditional Japanese desserts to finish your meal.",
-    },
-  ];
   return (
-    <section className=" relative">
-      <div className=" z-10">
+    <section className=" relative py-[180px] max-[843px]:py-[120px] border-y border-stroke-1-color  flex items-center justify-center">
+      <div className=" z-10 ">
         <Container>
-          <div className="min-h-screen flex items-center ">
+          <div className=" flex items-center">
             <div className=" grid grid-flow-col grid-cols-2 max-[843px]:grid-cols-1 max-[843px]:grid-flow-row max-[1200px]:px-4 gap-4  items-start ">
               <div className=" col-span-1 flex flex-col gap-6 ">
-                <h2 className=" text-bodyLarge font-satoshi text-primary-color">
-                  メニュー
-                </h2>
-                <h1 className=" max-[400px]:text-heading2  max-[843px]:text-display4 text-display2 font-notoSerifJp text-neutral-800">
-                  Browse Menu
-                </h1>
-                <p className=" max-[400px]:text-bodySmall max-[843px]:text-bodyDefault font-satoshi text-neutral-600">
+                <JapaneseText>メニュー</JapaneseText>
+                <PrimaryHeader>Browse Menu</PrimaryHeader>
+                <Paragraph>
                   Discover our selection of authentic Japanese flavors, from
                   fresh sushi to savory dishes, refreshing drinks, and
                   delightful desserts.
-                </p>
+                </Paragraph>
                 <SolidBtn text="SEE MORE" />
               </div>
               <div className=" col-span-1">
@@ -61,29 +38,23 @@ const BrowseMenuSection = () => {
                   >
                     <motion.div
                       whileHover={{ x: 5 }}
-                      className=" flex justify-between h-[100px] hover:ms-2"
+                      className=" flex justify-between h-[110px] hover:ms-2"
                     >
                       <div className=" flex gap-4">
-                        <div className=" h-full flex items-start pt-1 ">
-                          <img
-                            src={SushiIcon}
-                            alt=""
-                            className=" w-[43px] h-[50px] "
-                          />
+                        <div className=" h-full flex items-start pt-1 min-w-[43px]">
+                          <img src={SushiIcon} alt="" className=" w-[43px]" />
                         </div>
                         <div>
-                          <h1 className=" text-heading1 max-[400px]:text-heading3_500 font-notoSerifJp text-neutral-800">
-                            Sushi
-                          </h1>
-                          <p className=" text-bodyDefault max-[400px]:text-bodySmall font-satoshi text-neutral-600">
-                            Fresh and handcrafted sushi, inspired by tradition.
-                          </p>
+                          <SecondaryHeader>{i.title}</SecondaryHeader>
+                          <Paragraph>{i.description}</Paragraph>
                         </div>
                       </div>
                       <div className=" flex items-center">
-                        <button className=" border border-1 border-neutral-600 w-[60px] h-[60px] rounded-full flex items-center justify-center">
-                          <GoChevronRight className=" text-neutral-600 font-light size-[30px]" />
-                        </button>
+                        <RoundedBtn
+                          rightArrow={true}
+                          outline={true}
+                          color="neutral-600"
+                        />
                       </div>
                     </motion.div>
                   </div>
@@ -101,3 +72,28 @@ const BrowseMenuSection = () => {
 };
 
 export default BrowseMenuSection;
+
+const data = [
+  {
+    key: 1,
+    title: "Sushi",
+    description: "Fresh and handcrafted sushi, inspired by tradition.",
+  },
+  {
+    key: 2,
+    title: "Dishes",
+    description:
+      "Delicious, hearty dishes that bring the true taste of Japan to your table.",
+  },
+  {
+    key: 3,
+    title: "Drinks",
+    description:
+      "Refreshing drinks to enhance your meal, from classic teas to vibrant cocktails.",
+  },
+  {
+    key: 4,
+    title: "Desserts",
+    description: "Sweet traditional Japanese desserts to finish your meal.",
+  },
+];
