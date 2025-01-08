@@ -92,7 +92,9 @@ const HeroSection = ({
           </div>
         )}
       </section>
-      <div className=" h-[400px] w-full max-[843px]:h-[900px]"></div>
+      {isContactPage && (
+        <div className=" h-[400px] w-full max-[843px]:h-[900px]"></div>
+      )}
     </>
   );
 };
