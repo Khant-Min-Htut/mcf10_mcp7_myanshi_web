@@ -10,9 +10,9 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="mt-auto bg-header-color text-white min-h-screen flex flex-col">
-      <div className="py-16 px-4 mx-auto grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3 md:px-8 lg:py-32 flex-grow">
-        <div className="space-y-4 flex flex-col items-center justify-center md:items-start md:justify-start">
+    <footer className="mt-auto bg-header-color text-white flex flex-col">
+      <div className="py-16 px-4 mx-auto grid grid-cols- gap-12 md:grid-cols-2 lg:grid-cols-3 md:px-8 lg:py-32 flex-grow">
+        <div className="space-y-4 flex flex-col items-center justify-center md:items-start lg:justify-start">
           <div className="flex items-center space-x-2">
             <SushiIcon />
             <span className="font-notoSerifJp text-white text-2xl lg:text-3xl font-black">
@@ -34,8 +34,7 @@ export default function Footer() {
             </div>
           </Link>
         </div>
-
-        <div className="space-y-4">
+        <div className="space-y-4 md:space-y-8">
           <h3 className="text-neutral-100 font-satoshi font-semibold text-lg mb-4">
             OPENING TIMES
           </h3>
@@ -58,13 +57,11 @@ export default function Footer() {
             </div>
           </div>
         </div>
-
-        <div>
-          <h3 className="text-neutral-100 font-satoshi font-semibold text-lg mb-4">
+        <div className="">
+          <h3 className="text-neutral-100 font-satoshi  font-semibold text-lg mb-4">
             VISIT US
           </h3>
           <div className="space-y-8">
-            {/* Location 1 */}
             <div className="flex gap-4">
               <div className="flex-1">
                 <h4 className="font-satoshi text-neutral-200 font-medium text-base">
@@ -88,7 +85,6 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Location 2 */}
             <div className="flex gap-4">
               <div className="flex-1">
                 <h4 className="font-satoshi text-neutral-200 font-medium text-base">
@@ -112,7 +108,6 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Location 3 */}
             <div className="flex gap-4">
               <div className="flex-1">
                 <h4 className="font-satoshi text-neutral-200 font-medium text-base">
