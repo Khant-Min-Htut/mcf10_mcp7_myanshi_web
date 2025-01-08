@@ -2,7 +2,8 @@
 
 const DesktopCarouselCard = ({ currentIndex, data }) => {
   return (
-    <div className="relative mt-10 overflow-hidden ">
+    <div className="relative mt-10 ">
+      <div className="absolute right-full top-0 h-full w-[200px] bg-background-color z-10"></div>
       <div
         className="flex transition-transform duration-500 "
         style={{
@@ -19,7 +20,7 @@ const DesktopCarouselCard = ({ currentIndex, data }) => {
               alt={item.title}
               className="object-cover h-[80%] w-[70%]"
             />
-            <div className="p-10 py-14 lg:p-14 lg:left-[700px] absolute top-20 left-80 bg-header-color text-white lg:top-52 ">
+            <div className="p-10 py-14 lg:p-14 lg:left-[550px] absolute top-20 left-80 bg-header-color text-white lg:top-52 ">
               <h3 className="text-heading1 font-notoSerifJp pb-8">
                 {item.title}
               </h3>
