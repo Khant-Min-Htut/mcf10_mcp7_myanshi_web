@@ -30,11 +30,11 @@ const Cart = ({ image, title, originalPrice, promotionPrice, promotion }) => {
         </a>
         <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 space-x-5">
           <span className="text-primary-color text-bodyLarge font-satoshi font-bold">
-            {Number(originalPrice).toLocaleString()} MMK
+            {Number(promotionPrice).toLocaleString()} MMK
           </span>
-          {promotionPrice !== null && (
+          {originalPrice !== null && (
             <span className="line-through text-neutral-600">
-              {Number(promotionPrice).toLocaleString()} MMK
+              {Number(originalPrice).toLocaleString()} MMK
             </span>
           )}
         </p>
