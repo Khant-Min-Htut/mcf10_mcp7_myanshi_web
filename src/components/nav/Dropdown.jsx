@@ -8,10 +8,10 @@ const Dropdown = () => {
 
   return (
     <nav className=" mx-auto bg-header-color text-white px-4 py-4">
-      <div className="flex items-center justify-between">
+      <div className="flex  items-center justify-between  ">
         <div className="flex items-center gap-2">
           <Link href="/">
-            <SushiIcon />
+            <SushiIcon className="absolute w-32" />
           </Link>
           <span className="font-notoSerifJp text-white text-heading3 font-black">
             MYANSHI
@@ -23,7 +23,7 @@ const Dropdown = () => {
           className="block md:hidden text-white focus:outline-none"
         >
           <svg
-            className="w-6 h-6"
+            className="w-10 h-10"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -32,13 +32,13 @@ const Dropdown = () => {
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
-              strokeWidth="2"
+              strokeWidth="2  "
               d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
             ></path>
           </svg>
         </button>
 
-        <div className="hidden md:flex items-center gap-4 space-x-4">
+        <div className="hidden md:flex items-center lg:space-x-10 md:space-x-5 mr-4">
           <a
             href="/"
             className="font-satoshi text-heading4 relative text-white after:content-[''] after:absolute after:left-0 after:-bottom-1.5 after:h-[2px] after:w-0 after:bg-red-500 after:transition-all hover:after:w-full"
@@ -76,7 +76,7 @@ const Dropdown = () => {
       </div>
 
       {isOpen && (
-        <div className="md:hidden mt-6 mb-6 space-y-1">
+        <div className="lg:hidden mt-6 mb-6  space-y-6">
           <a
             href="/"
             className="block font-satoshi text-heading4 relative text-white after:content-[''] after:absolute after:left-0 after:-bottom-1.5 after:h-[2px] after:w-0 after:bg-red-500 after:transition-all hover:after:w-14"

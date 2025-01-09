@@ -1,0 +1,30 @@
+import React, { useState } from "react";
+import { Categories } from "../data/menu.js";
+import CategoryBtn from "./CategoryBtn.jsx";
+import CartSection from "./CartSection.jsx";
+
+const CategorySection = () => {
+  const [selectedCategory, setSelectedCategory] = useState("All");
+  const handleCategorySelect = (categoryName) => {
+    setSelectedCategory(categoryName);
+  };
+  return (
+    <section>
+      <main className=" pt-10 lg:pt-32">
+        <ul className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-10 w-full md:w-fit max-md:px-12 mx-auto mb-16">
+          {Categories.map((category) => (
+            <CategoryBtn
+              key={category.id}
+              category={category}
+              onClick={() => handleCategorySelect(category.name)}
+              isActive={category.name === selectedCategory}
+            ></CategoryBtn>
+          ))}
+        </ul>
+        <CartSection selectedCategory={selectedCategory} />
+      </main>
+    </section>
+  );
+};
+
+export default CategorySection;
