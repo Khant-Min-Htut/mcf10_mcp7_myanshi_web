@@ -5,9 +5,21 @@ import Paragraph from "../typography/Paragraph";
 import RoundedBtn from "../../buttons/RoundedBtn";
 import SecondaryHeader from "../typography/SecondaryHeader";
 import img from "../../assets/MyanShi/Menu/MigiriSushi.jpg";
+import img2 from "../../assets/MyanShi/Menu/ChimmiMakis.jpg";
+import img3 from "../../assets/MyanShi/Menu/Matcha_Tea.jpg";
 import Container from "../Container";
+import testAvatar1 from "../../assets/MyanShi/Avatar/testAvatar1.png";
+import useCarousel from "../../hooks/useCarouse";
+import { motion } from "framer-motion";
 
 const ClientFeedbackSection = () => {
+  const cardsPerView = 1;
+  const { currentIndex, nextSlide, prevSlide } = useCarousel(
+    data,
+    cardsPerView
+  );
+  const currentData = data[currentIndex];
+
   return (
     <div className=" py-[180px] max-[843px]:py-[120px] border-y border-stroke-1-color">
       <Container>
@@ -26,26 +38,51 @@ const ClientFeedbackSection = () => {
                 </Paragraph>
               </div>
               <div className="flex gap-2 items-start ">
-                <RoundedBtn leftArrow={true} outline={true} />
-                <RoundedBtn rightArrow={true} outline={false} />
+                <RoundedBtn
+                  leftArrow={true}
+                  outline={true}
+                  onClick={prevSlide}
+                />
+                <RoundedBtn
+                  rightArrow={true}
+                  outline={false}
+                  onClick={nextSlide}
+                />
               </div>
             </div>
           </div>
-          <div className=" col-span-2 flex max-[400px]:flex-col gap-2 items-center">
+
+          <motion.div
+            key={currentData?.img} // Key changes when currentData?.img changes
+            initial={{ opacity: 0.8, x: 0 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            className=" col-span-2 flex max-[400px]:flex-col gap-2 items-center"
+          >
             <img
-              src={img}
-              alt="Sushi"
-              className="object-cover w-1/2 max-[400px]:w-full h-full max-[834px]:col-span-2  "
+              src={currentData?.img || "/fallback-image.jpg"}
+              alt={currentData?.title || "Fallback Sushi"}
+              loading="lazy"
+              className="object-cover w-1/2 max-[400px]:w-full h-full max-[834px]:col-span-2"
             />
             <div className="flex flex-col gap-10">
-              <SecondaryHeader>“The best sushi rolls ever”</SecondaryHeader>
-              <Paragraph>
-                MYANSHI has redefined my sushi experience with their fresh
-                ingredients and authentic flavors. Every bite was a burst of
-                perfection. Highly recommend for all sushi lovers!
-              </Paragraph>
+              <SecondaryHeader>“{currentData.title}”</SecondaryHeader>
+              <Paragraph>{currentData.description}</Paragraph>
+              <div className="flex items-center gap-4">
+                <img
+                  className="w-10 h-10 rounded-full"
+                  src={currentData?.user.img}
+                  alt
+                />
+                <div>
+                  <h1 className=" font-satoshi text-bodyExtraLarge text-neutral-800">
+                    {currentData?.user.name}
+                  </h1>
+                  <Paragraph>{currentData?.user.email}</Paragraph>
+                </div>
+              </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </Container>
     </div>
@@ -56,15 +93,36 @@ export default ClientFeedbackSection;
 
 const data = [
   {
-    title: "The best sushi rolls ever",
+    title: "Exquisite Salmon Sushi Rolls",
     img: img,
     description:
-      "MYANSHI has redefined my sushi experience with their fresh ingredients and authentic flavors. Every bite was a burst of perfection. Highly recommend for all sushi lovers!",
+      "The salmon sushi rolls from MYANSHI are an absolute delight! The freshness of the salmon paired with perfectly seasoned rice made this an unforgettable experience. A must-try for any sushi enthusiast!",
     user: {
-      name: "John Doe",
-      email: "j7HtW@example.com",
-      img: "",
+      name: "Jane Smith",
+      email: "jane.smith@example.com",
+      img: testAvatar1,
     },
-
+  },
+  {
+    title: "A Symphony of Flavors: Dragon Roll",
+    img: img2,
+    description:
+      "The Dragon Roll from MYANSHI was a masterpiece. The perfect blend of eel, avocado, and creamy sauce made each bite heavenly. I've never tasted anything quite like it!",
+    user: {
+      name: "Michael Brown",
+      email: "michael.brown@example.com",
+      img: testAvatar1,
+    },
+  },
+  {
+    title: "Unparalleled Tuna Delight",
+    img: img3,
+    description:
+      "The tuna rolls at MYANSHI are second to none! The freshness and melt-in-your-mouth texture of the tuna combined with subtle seasoning created a truly divine experience.",
+    user: {
+      name: "Emily Davis",
+      email: "emily.davis@example.com",
+      img: testAvatar1,
+    },
   },
 ];

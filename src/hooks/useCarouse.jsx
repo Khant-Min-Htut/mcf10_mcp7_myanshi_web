@@ -32,7 +32,7 @@ const useCarousel = (items, cardsPerView = 3, autoSlideInterval = 3000) => {
     }
   }, [currentIndex, autoSlideInterval]);
 
-  return { currentIndex, nextSlide, prevSlide, cardLength };
+  return { currentIndex, nextSlide, prevSlide, cardLength, isEnd };
 };
 
 export default useCarousel;

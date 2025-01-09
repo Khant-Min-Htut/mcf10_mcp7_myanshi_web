@@ -11,16 +11,16 @@ const RoundedBtn = ({
   return (
     <div>
       <button
-        className={` text-white px-3 py-3 rounded-full ${
-          outline ? "border border-" + color : "bg-" + color
+        className={` rounded-full size-[60px] max-[400px]:size-[48px] flex items-center justify-center ${
+          outline ? `border border-neutral-600 text-neutral-600 ` : ` bg-primary-color hover:bg-[rgba(184,26,0,1)] text-neutral-100 `
         }`}
         onClick={onClick}
       >
         {rightArrow && (
-          <GoChevronRight className={` ${outline ? "text-" + color : ""} `} />
+          <GoChevronRight className={` size-8 `} />
         )}
         {leftArrow && (
-          <GoChevronLeft className={` ${outline ? "text-" + color : ""}`} />
+          <GoChevronLeft className={` size-8 `} />
         )}
       </button>
     </div>

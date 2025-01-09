@@ -24,6 +24,8 @@ const Carousel = ({ menuItems, cardsPerView = 3 }) => {
               title={item.title}
               promotionPrice={item.promotionPrice}
               originalPrice={item.originalPrice}
+              promotionPercent={item.promotionPercent}
+
             />
           ))}
         </div>

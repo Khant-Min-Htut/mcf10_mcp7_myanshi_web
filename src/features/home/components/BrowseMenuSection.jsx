@@ -1,7 +1,6 @@
 import React from "react";
 import SolidBtn from "../../../buttons/SolidBtn";
 import { motion } from "framer-motion";
-import { GoChevronRight } from "react-icons/go";
 import Container from "../../../components/Container";
 import SushiIcon from "../../../assets/MyanShi/Home/myanshi_logo.png";
 import Imgs from "../data/Imgs";
