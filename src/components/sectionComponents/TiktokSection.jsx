@@ -17,14 +17,14 @@ const TiktokSection = () => {
   return (
     <section className=" py-[180px] max-[843px]:py-[120px] border-y border-stroke-1-color max-[1200px]:px-2 ">
       <Container>
-        <div className=" min-h-[882px] h-full w-full  flex flex-col justify-center items-center gap-10 ">
+        <div className=" h-full w-full  flex flex-col justify-center items-center gap-10">
           <div className=" text-center flex flex-col gap-6 ">
             <JapaneseText>カスタマーレビュー</JapaneseText>
             <PrimaryHeader>Our Tiktok</PrimaryHeader>
           </div>
 
-          <div className="grid grid-cols-2  gap-2 max-[400px]:grid-cols-1 ">
-            <div className="col-span-1 max-[400px]:col-span-2 relative group ">
+          <div className="grid grid-cols-2  gap-2 max-[650px]:grid-cols-1 ">
+            <div className="col-span-1 max-[500px]:col-span-2 relative group ">
               <img
                 src={Img1}
                 alt="Main Image"
@@ -38,7 +38,7 @@ const TiktokSection = () => {
                 className=" absolute w-full h-full top-0 left-0 opacity-0 z-10 bg-neutral-800 transition-opacity duration-300 group-hover:opacity-50 "
               ></div>
             </div>
-            <div className=" grid grid-cols-2 gap-2 col-span-1 max-[400px]:col-span-2">
+            <div className=" grid grid-cols-2 gap-2 col-span-1 max-[500px]:col-span-2">
               {[Img2, Img3, Img4, Img5].map((img, index) => (
                 <div
                   key={index}
@@ -61,7 +61,7 @@ const TiktokSection = () => {
             </div>
           </div>
 
-          <div className="flex items-center justify-center">
+          <div className="flex items-center justify-center bg-fuchsia-300">
             <SolidBtn text="SEE MORE" />
           </div>
         </div>

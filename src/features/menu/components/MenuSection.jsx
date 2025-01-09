@@ -11,7 +11,7 @@ const CategorySection = () => {
   };
   return (
     <section>
-      <main className=" pt-10 lg:pt-32">
+      <main className=" py-[180px] max-[843px]:py-[120px] border-y border-stroke-1-color">
         <ul className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-10 w-full md:w-fit max-md:px-12 mx-auto mb-16">
           {Categories.map((category) => (
             <CategoryBtn
