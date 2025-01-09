@@ -5,7 +5,7 @@ import SolidBtn from "../../buttons/SolidBtn";
 const ContactCard = () => {
   const [email, setEmail] = useState("");
   return (
-    <form className="w-full max-w-[626px] mx-auto grid grid-cols-2 gap-6 px-8 py-16 bg-stroke-1-color">
+    <form className="w-full max-w-[626px] mx-auto grid grid-cols-2 gap-6 px-8 py-16 bg-neutral-100 border-2 border-stroke-1-color ">
       <div className=" max-[843px]:col-span-2">
         <FloatingInput
           type="email"

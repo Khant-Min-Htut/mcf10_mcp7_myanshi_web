@@ -6,6 +6,7 @@ import BreadCrumb from "../BreadCrumb";
 import SolidBtn from "../../buttons/SolidBtn";
 import OutLineBtn from "../../buttons/OutLineBtn";
 import ContactCard from "../cards/ContactCard";
+import Paragraph from "../typography/Paragraph";
 
 const HeroSection = ({
   isBreadCrumb,
@@ -18,6 +19,7 @@ const HeroSection = ({
   return (
     <>
       <section className="flex items-center relative">
+        {/* background image */}
         {isHomePage ? (
           <div className=" overflow-hidden">
             <img
@@ -35,8 +37,10 @@ const HeroSection = ({
             />
           </div>
         )}
+
         <div
-          className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center w-full flex flex-col gap-10 justify-center items-center ${
+          className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center w-full flex flex-col gap-12 
+            max-[843px]:gap-4 justify-center items-center ${
             isHomePage &&
             "max-[400px]:justify-start max-[400px]:text-start max-[400px]:items-start"
           } max-sm:px-2 ${
@@ -45,6 +49,7 @@ const HeroSection = ({
           }`}
         >
           {isHomePage && (
+
             <h1 className=" text-primary-color font-satoshi text-bodyLarge max-[400px]:text-bodyLargeDefault max-[400px]:text-start max-[400px]:w-full ">
               ミャンマーへようこそ
             </h1>
@@ -59,6 +64,7 @@ const HeroSection = ({
           >
             {title}
           </h1>
+
           {isHomePage && (
             <>
               <p className="text-neutral-100 lg:max-w-[700px] max-sm:text-bodySmall font-satoshi text-bodyDefault">
@@ -80,11 +86,12 @@ const HeroSection = ({
                   }
                 />
               </div>
-              <div className="max-sm:w-full flex justify-center">
+              <div className="max-sm:w-full flex justify-center mt-[44px]">
                 <AnimatedButton />
               </div>
             </>
           )}
+
         </div>
         {isContactPage && (
           <div className="absolute bottom-0 right-[30%] max-[843px]:right-1/2 transform translate-x-1/2 translate-y-1/2 max-[843px]:translate-y-[90%]  w-full max-w-[626px] max-[1200px]:max-w-[506px] max-[843px]:max-w-[626px] max-[843px]:px-2">

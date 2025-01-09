@@ -23,7 +23,7 @@ const FloatingInput = ({
       {isTextarea ? (
         <textarea
           rows="3"
-          className="block py-2.5 px-0 w-full  text-sm text-gray-900 bg-transparent border-0 border-b-2 border-stroke-2-color appearance-none focus:outline-none focus:ring-0 focus:border-primary-color peer"
+          className="block py-2.5 px-0 w-full  text-sm text-gray-900 bg-transparent border-0 border-b-2 border-stroke-2-color hover:border-primary-color appearance-none focus:outline-none focus:ring-0 focus:border-primary-color peer"
         />
       ) : (
         <input
@@ -32,7 +32,7 @@ const FloatingInput = ({
           id={id}
           value={value}
           onChange={onChange}
-          className={`block py-2.5 px-0 w-full  text-sm text-gray-900 bg-transparent border-0 border-b-2 border-stroke-2-color appearance-none focus:outline-none focus:ring-0 focus:border-primary-color peer  `}
+          className={`block py-2.5 px-0 w-full  text-sm text-gray-900 bg-transparent border-0 border-b-2 border-stroke-2-color hover:border-primary-color appearance-none focus:outline-none focus:ring-0 focus:border-primary-color peer  `}
           placeholder=" "
           required={required}
           {...props}

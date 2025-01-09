@@ -16,9 +16,10 @@ const OurArticleSection = () => {
               <PrimaryHeader>Our Articles</PrimaryHeader>
             </div>
             <OutLineBtn
+              dark={true}
               text={"READ MORE"}
               className={
-                "text-neutral-700 border-neutral-700 hover:bg-neutral-700 hover:text-white"
+                "text-neutral-700 border-neutral-700   "
               }
             />
           </div>
