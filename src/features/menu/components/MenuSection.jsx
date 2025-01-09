@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Categories } from "../data/menu.js";
 import CategoryBtn from "./CategoryBtn.jsx";
 import CartSection from "./CartSection.jsx";
+import ClientFeedbackSection from "../../../components/sectionComponents/ClientFeedbackSection.jsx";
 
 const CategorySection = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -22,6 +23,7 @@ const CategorySection = () => {
           ))}
         </ul>
         <CartSection selectedCategory={selectedCategory} />
+       
       </main>
     </section>
   );
