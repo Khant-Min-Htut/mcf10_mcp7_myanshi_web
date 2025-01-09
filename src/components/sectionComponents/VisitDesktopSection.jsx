@@ -9,9 +9,12 @@ import imageThree from "../../assets/MyanShi/AboutUs/restaurant-image-3.png";
 import right from "../../assets/MyanShi/AboutUs/right-arrow-svgrepo-com.svg";
 import DesktopCarouselCard from "../../features/about-us/components/DesktopCarouselCard";
 import Container from "../Container";
+import { useMediaQuery } from "../../hooks/useMediaQuery";
+import Visit from "../../features/about-us/components/Visit";
 // import DesktopCarouselCard from "./DesktopCarouselCard";
 
-const VisitDesktopSection = () => {
+const VisitDesktopSection = ({isContactPage}) => {
+  const isDesktop = useMediaQuery("(min-width : 768px)");
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = () => {
@@ -29,11 +32,15 @@ const VisitDesktopSection = () => {
     return () => clearInterval(interval);
   }, []);
 
+
+
   return (
-    <div className=" py-[180px] max-[843px]:py-[120px] border-y border-stroke-1-color">
+    <div className=" py-[180px] max-[843px]:py-[120px] border-y border-stroke-1-color max-[1200px]:px-2">
       <Container>
         <div className="flex justify-between items-end">
-          <div>
+          {
+            isDesktop &&<>
+            <div>
             <h2 className="font-satoshi sm:text-bodyLarge text-bodyDefault text-primary-color">
               レストラン
             </h2>
@@ -57,8 +64,10 @@ const VisitDesktopSection = () => {
               <img src={right} alt="right" className="size-4" />
             </button>
           </div>
+          </>
+          }
         </div>
-        <DesktopCarouselCard currentIndex={currentIndex} data={data} />
+        {isDesktop ? <DesktopCarouselCard currentIndex={currentIndex} data={data} /> : <Visit isContactPage={true}/>}
       </Container>
     </div>
   );
