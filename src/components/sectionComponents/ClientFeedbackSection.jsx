@@ -21,23 +21,23 @@ const ClientFeedbackSection = () => {
   const currentData = data[currentIndex];
 
   return (
-    <div className=" py-[180px] max-[843px]:py-[120px] border-y border-stroke-1-color">
+    <div className=" py-[180px] max-[1000px]:py-[120px] border-y border-stroke-1-color 0">
       <Container>
         <div
-          className={`grid grid-flow-col grid-cols-3 max-[843px]:grid-cols-1 max-[843px]:grid-flow-row  h-full gap-4  max-[1200px]:px-2`}
+          className={`grid grid-flow-col grid-cols-3 max-[1000px]:grid-cols-1 max-[1000px]:grid-flow-row  h-full gap-10  max-[1200px]:px-2`}
         >
           <div className="flex flex-col gap-6 col-span-1  justify-between">
             <JapaneseText>クライアントは言う</JapaneseText>
-            <div className="flex flex-col gap-6 col-span-1 max-[834px]:flex-row  justify-between max-[840px]:items-center">
+            <div className="flex flex-col gap-6 col-span-1 max-[1000px]:flex-row  justify-between max-[1000px]:items-center">
               <PrimaryHeader>What Our Clients Say</PrimaryHeader>
-              <div className=" max-[843px]:hidden">
+              <div className=" max-[1000px]:hidden">
                 <Paragraph>
                   Discover what our customers love about MYANSHI through their
                   heartfelt reviews. From delicious sushi to an inviting
                   atmosphere, their words reflect our dedication to excellence.
                 </Paragraph>
               </div>
-              <div className="flex gap-2 items-start ">
+              <div className="flex gap-2 items-start max-[500px]:hidden ">
                 <RoundedBtn
                   leftArrow={true}
                   outline={true}
@@ -57,13 +57,13 @@ const ClientFeedbackSection = () => {
             initial={{ opacity: 0.8, x: 0 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
-            className=" col-span-2 flex max-[400px]:flex-col gap-2 items-center"
+            className=" col-span-2 flex max-[500px]:flex-col gap-2 items-center"
           >
             <img
               src={currentData?.img || "/fallback-image.jpg"}
               alt={currentData?.title || "Fallback Sushi"}
               loading="lazy"
-              className="object-cover w-1/2 max-[400px]:w-full h-full max-[834px]:col-span-2"
+              className="object-cover w-[50%] max-w-[397px] h-[450px] max-[500px]:w-full max-[500px]:h-auto max-[1000px]:col-span-2"
             />
             <div className="flex flex-col gap-10">
               <SecondaryHeader>“{currentData.title}”</SecondaryHeader>
@@ -83,6 +83,18 @@ const ClientFeedbackSection = () => {
               </div>
             </div>
           </motion.div>
+
+          <div className="w-full flex items-center justify-center">
+            <div className="flex gap-4 items-start min-[500px]:hidden ">
+              <RoundedBtn leftArrow={true} outline={true} onClick={prevSlide} />
+              <RoundedBtn
+                rightArrow={true}
+                outline={false}
+                onClick={nextSlide}
+              />
+            </div>
+          </div>
+
         </div>
       </Container>
     </div>
