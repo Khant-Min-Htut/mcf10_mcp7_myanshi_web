@@ -1,10 +1,10 @@
 import React from 'react'
 import VisitDesktopSection from '../../../components/sectionComponents/VisitDesktopSection'
 
-const VisitDesktop = () => {
+const VisitDesktop = ({isContactPage}) => {
   return (
     <>
-        <VisitDesktopSection/>
+        <VisitDesktopSection isContactPage={isContactPage}/>
     </>
   )
 }

@@ -3,7 +3,7 @@
 const DesktopCarouselCard = ({ currentIndex, data }) => {
   return (
     <div className="relative mt-10 ">
-      <div className="absolute right-full top-0 h-full w-[200px] bg-background-color z-10"></div>
+      <div className="absolute right-full top-0 h-full w-[300px] bg-background-color z-10"></div>
       <div
         className="flex transition-transform duration-500 "
         style={{

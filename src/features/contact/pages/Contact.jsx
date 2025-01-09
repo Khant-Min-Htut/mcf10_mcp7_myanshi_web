@@ -3,6 +3,8 @@ import HeroSection from "../../../components/sectionComponents/HeroSection";
 import VisitDesktop from "../components/VisitDesktop";
 import OurTiktok from "../components/OurTiktok";
 import FAQ from "../components/FAQ";
+import { useMediaQuery } from "../../../hooks/useMediaQuery";
+import Visit from "../../about-us/components/Visit";
 
 const Contact = () => {
   return (
@@ -13,9 +15,9 @@ const Contact = () => {
         title="Contact Us"
         isContactPage={true}
       />
-      <VisitDesktop/>
-      <FAQ/>
-      <OurTiktok/>
+      <VisitDesktop isContactPage={true}/>
+      <FAQ />
+      <OurTiktok />
     </div>
   );
 };

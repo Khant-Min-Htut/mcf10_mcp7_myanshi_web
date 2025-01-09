@@ -93,8 +93,11 @@ const HeroSection = ({
           )}
 
         </div>
+
+        
+        {/* contact card  */}
         {isContactPage && (
-          <div className="absolute bottom-0 right-[30%] max-[843px]:right-1/2 transform translate-x-1/2 translate-y-1/2 max-[843px]:translate-y-[90%]  w-full max-w-[626px] max-[1200px]:max-w-[506px] max-[843px]:max-w-[626px] max-[843px]:px-2">
+          <div className="absolute bottom-0 right-[30%] max-[843px]:right-1/2 transform translate-x-1/2 translate-y-1/2 max-[843px]:translate-y-[90%] max-[660px]:translate-y-[95%]  w-full max-w-[626px] max-[1200px]:max-w-[506px] max-[843px]:max-w-[626px] max-[643px]:px-4">
             <ContactCard />
           </div>
         )}

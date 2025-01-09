@@ -9,7 +9,7 @@ import imageThree from "../../../assets/MyanShi/AboutUs/restaurant-image-3.png";
 import right from "../../../assets/MyanShi/AboutUs/right-arrow-svgrepo-com.svg";
 import CarouselCard from "./CarouselCard";
 
-const Visit = () => {
+const Visit = ({ isContactPage }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = () => {
@@ -28,7 +28,7 @@ const Visit = () => {
   }, []);
 
   return (
-    <div className=" pb-28 px-3">
+    <div className={`${!isContactPage && "pb-28"} px-3`}>
       <h2 className="font-satoshi text-bodyDefault text-primary-color">
         レストラン
       </h2>
