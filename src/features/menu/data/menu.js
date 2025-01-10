@@ -165,7 +165,7 @@ export const Carts = [
     title: "Vegetarian Soup",
     promotionPrice: 20000,
     originalPrice: null,
-    promotions: 20000,
+    promotions: null,
     category: "Dishes",
   },
 ];

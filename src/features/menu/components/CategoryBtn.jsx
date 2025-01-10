@@ -8,7 +8,7 @@ const CategoryBtn = ({ category, onClick, isActive }) => {
         isActive
           ? "bg-primary-color text-white outline-none hover:border-primary-color"
           : "border-neutral-600 text-neutral-600 hover:border-neutral-600"
-      }  border font-satoshi  uppercase  font-normal  px-5  py-3 text-heading5 transition-all duration-200  ease-in-out hover:shadow-lg hover:shadow-neutral-600 `}
+      }  border font-satoshi  uppercase  font-normal  px-5  py-3 text-heading5 hover:bg-primary-color hover:text-white transition-all duration-300 ease-in-out`}
     >
       {category.name}
     </button>
