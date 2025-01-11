@@ -33,11 +33,11 @@ const BrowseMenuSection = () => {
                 {data.map((i) => (
                   <div
                     key={i.key}
-                    className="border-b border-stroke-2-color last:border-none py-4"
+                    className="border-b border-stroke-2-color last:border-none py-4 group"
                   >
-                    <motion.div
-                      whileHover={{ x: 5 }}
-                      className=" flex justify-between h-[110px] hover:ms-2"
+                    <div
+                      
+                      className=" flex justify-between h-[110px] hover:ms-2transform group-hover:translate-x-1.5 duration-300 "
                     >
                       <div className=" flex gap-4">
                         <div className=" h-full flex items-start pt-1 min-w-[43px]">
@@ -55,7 +55,7 @@ const BrowseMenuSection = () => {
                           color="neutral-600"
                         />
                       </div>
-                    </motion.div>
+                    </div>
                   </div>
                 ))}
               </div>
