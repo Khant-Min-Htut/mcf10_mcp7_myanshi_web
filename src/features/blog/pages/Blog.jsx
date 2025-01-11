@@ -2,6 +2,7 @@ import React from "react";
 import HeroSection from "../../../components/sectionComponents/HeroSection";
 import PrepareMenuSection from "../components/PrepareMenuSection";
 
+//TEST
 const Blog = () => {
   return (
     <div>
