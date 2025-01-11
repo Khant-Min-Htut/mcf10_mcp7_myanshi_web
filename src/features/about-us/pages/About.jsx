@@ -22,15 +22,15 @@ const About = () => {
         currentPage="About Us"
         title="We are MYANSHI"
       />
-      <div className="space-y-28 py-28">
+      <div className="space-y-28 pt-28">
         <Container>
           <Hero />
         </Container>
-        <hr className="border-b-2 border-stroke-1-color" />
-        <Container>
-          <AboutUs />
-        </Container>
-        <hr className="border-b-2 border-stroke-1-color" />
+        {/* <hr className="border-b-2 border-stroke-1-color" /> */}
+        {/* <Container> */}
+        <AboutUs />
+        {/* </Container> */}
+        {/* <hr className="border-b-2 border-stroke-1-color" /> */}
         <Container>
           <MyJourney />
         </Container>
@@ -40,10 +40,10 @@ const About = () => {
         </Container>
         <hr className="border-b-2 border-stroke-1-color" />
         <Container>{isDesktop ? <VisitDesktop /> : <Visit />}</Container>
-        <hr className="border-b-2 border-stroke-1-color" />
-        <Container>
-          <OurTiktok />
-        </Container>
+        {/* <hr className="border-b-2 border-stroke-1-color" /> */}
+        {/* <Container> */}
+        <OurTiktok />
+        {/* </Container> */}
       </div>
     </section>
   );

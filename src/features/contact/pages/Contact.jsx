@@ -8,7 +8,7 @@ import Visit from "../../about-us/components/Visit";
 
 const Contact = () => {
   return (
-    <div>
+    <main>
       <HeroSection
         isBreadCrumb={true}
         currentPage={"Contact Us"}
@@ -18,7 +18,7 @@ const Contact = () => {
       <VisitDesktop isContactPage={true}/>
       <FAQ />
       <OurTiktok />
-    </div>
+    </main>
   );
 };
 
