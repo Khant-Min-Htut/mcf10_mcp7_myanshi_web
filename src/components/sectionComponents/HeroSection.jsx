@@ -1,12 +1,11 @@
 import React from "react";
-import Imgs from "../../features/home/data/Imgs";
 import CoverImg from "../../assets/MyanShi/AboutUs/aboutHeroImg.jpg";
 import AnimatedButton from "../../buttons/AnimatedButton";
-import BreadCrumb from "../BreadCrumb";
-import SolidBtn from "../../buttons/SolidBtn";
 import OutLineBtn from "../../buttons/OutLineBtn";
+import SolidBtn from "../../buttons/SolidBtn";
+import Imgs from "../../features/home/data/Imgs";
+import BreadCrumb from "../BreadCrumb";
 import ContactCard from "../cards/ContactCard";
-import Paragraph from "../typography/Paragraph";
 
 const HeroSection = ({
   isBreadCrumb,
@@ -14,6 +13,7 @@ const HeroSection = ({
   currentPage,
   title,
   isContactPage,
+  links,
 }) => {
   const { HeroSectionImg } = Imgs();
   return (
@@ -41,21 +41,22 @@ const HeroSection = ({
         <div
           className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center w-full flex flex-col gap-12 
             max-[843px]:gap-4 justify-center items-center ${
-            isHomePage &&
-            "max-[400px]:justify-start max-[400px]:text-start max-[400px]:items-start"
-          } max-sm:px-2 ${
+              isHomePage &&
+              "max-[400px]:justify-start max-[400px]:text-start max-[400px]:items-start"
+            } max-sm:px-2 ${
             isContactPage &&
             " ps-12 min-[843px]:justify-start min-[843px]:text-start min-[843px]:items-start"
           }`}
         >
           {isHomePage && (
-
             <h1 className=" text-primary-color font-satoshi text-bodyLarge max-[400px]:text-bodyLargeDefault max-[400px]:text-start max-[400px]:w-full ">
               ミャンマーへようこそ
             </h1>
           )}
 
-          {isBreadCrumb && <BreadCrumb currentPage={currentPage} />}
+          {isBreadCrumb && (
+            <BreadCrumb currentPage={currentPage} links={links} />
+          )}
 
           <h1
             className={` font-notoSerifJp text-neutral-100 font-light  text-display1 max-[834px]:text-display3 max-sm:text-heading1 max-sm:w-full ${
@@ -91,10 +92,8 @@ const HeroSection = ({
               </div>
             </>
           )}
-
         </div>
 
-        
         {/* contact card  */}
         {isContactPage && (
           <div className="absolute bottom-0 right-[30%] max-[843px]:right-1/2 transform translate-x-1/2 translate-y-1/2 max-[843px]:translate-y-[90%] max-[660px]:translate-y-[95%]  w-full max-w-[626px] max-[1200px]:max-w-[506px] max-[843px]:max-w-[626px] max-[643px]:px-4">

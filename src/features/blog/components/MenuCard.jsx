@@ -31,7 +31,7 @@ const MenuCard = ({ data }) => {
               <p className="text-bodySmall text-neutral-600 mb-5 lg:text-bodyLarge">
                 {item.desc}
               </p>
-              <Link to={"#"}>
+              <Link to={`/blog/${item.id}`}>
                 <button className="flex justify-between items-center font-satoshi lg:text-bodyLarge">
                   READ MORE
                   <MdKeyboardArrowRight size={24} className="block lg:hidden" />
