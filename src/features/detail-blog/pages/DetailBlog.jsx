@@ -1,9 +1,13 @@
 import React from "react";
 import HeroSection from "../../../components/sectionComponents/HeroSection";
+ 
+import BlogSection from "../components/BlogSection";
+ 
 import DetailBlogSection from "../components/DetailBlogSection";
 
 const DetailBlog = () => {
   const links = [{ path: "/blog", title: "Blog" }];
+ 
   return (
     <div>
       <HeroSection
@@ -12,7 +16,9 @@ const DetailBlog = () => {
         title="How to prepare a delicious gluten-free sushi"
         links={links}
       />
-      <DetailBlogSection />
+ 
+      <BlogSection />
+ 
     </div>
   );
 };
