@@ -59,8 +59,8 @@ const HeroSection = ({
           )}
 
           <h1
-            className={` font-notoSerifJp text-neutral-100 font-light  text-display1 max-[834px]:text-display3 max-sm:text-heading1 max-sm:w-full ${
-              isContactPage && "max-[1105px]:text-display3 "
+            className={`mx-10 font-notoSerifJp text-neutral-100 font-light  text-display1 max-[834px]:text-display3 max-sm:text-heading1 max-sm:w-full ${
+              isContactPage && "max-[1105px]:text-display3  "
             }`}
           >
             {title}
