@@ -4,9 +4,9 @@ import Header from "./Header";
 
 const Layout = () => {
   return (
-    <div className=" max-w-[1440px] mx-auto w-full">
+    <div className=" w-full mx-auto">
       <Header />
-      <main className="max-w-[1440px] mx-auto bg-back-ground-color overflow-hidden">
+      <main className=" w-full mx-auto bg-back-ground-color overflow-hidden">
         <Outlet />
       </main>
       <Footer />
