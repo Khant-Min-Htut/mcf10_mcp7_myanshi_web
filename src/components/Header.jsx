@@ -1,4 +1,5 @@
-import Dropdown from "./nav/DropDown";
+import React from "react";
+import Dropdown from "./nav/Dropdown";
 
 const Header = () => {
   return (

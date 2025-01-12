@@ -36,7 +36,11 @@ const MenuCard = ({ data }) => {
                 {item.desc}
               </p>
               <Link to={`/blog/${item.id}`}>
+ 
                 <button className="flex justify-between items-center font-satoshi lg:text-bodyLarge group-hover:text-primary-color">
+ 
+                
+ 
                   READ MORE
                   <MdKeyboardArrowRight
                     size={24}
