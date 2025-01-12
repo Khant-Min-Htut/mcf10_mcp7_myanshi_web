@@ -6,7 +6,6 @@ import YoutubeBtn from "../buttons/YoutubeBtn";
 import location1 from "../assets/MyanShi/VisitOurRestaurant/location1.png";
 import location2 from "../assets/MyanShi/VisitOurRestaurant/location2.png";
 import location3 from "../assets/MyanShi/VisitOurRestaurant/location3.png";
-
 import { Link } from "react-router-dom";
 
 export default function Footer() {
