@@ -33,12 +33,12 @@ const Dropdown = () => {
           </div>
 
           <button
-            ref={ref}
-            onClick={() => setIsOpen(!isOpen)}
+            // ref={ref}
             className="block md:hidden text-white focus:outline-none z-50"
           >
             {isOpen ? (
               <svg
+                onClick={() => setIsOpen(false)}
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -54,6 +54,7 @@ const Dropdown = () => {
               </svg>
             ) : (
               <svg
+                onClick={() => setIsOpen(true)}
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"

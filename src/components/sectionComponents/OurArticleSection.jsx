@@ -5,9 +5,10 @@ import OutLineBtn from "../../buttons/OutLineBtn";
 import Container from "../Container";
 import ArticlesCard from "../cards/ArticlesCard";
 import img from "../../assets/MyanShi/OurTitok/titokImg2.png";
+import SectionContainer from "../SectionContainer";
 const OurArticleSection = () => {
   return (
-    <div className=" py-[180px] max-[843px]:py-[120px] max-[1200px]:px-2 border-y border-stroke-1-color">
+    <SectionContainer>
       <Container>
         <div className=" flex flex-col gap-12">
           <div className=" flex justify-between items-center">
@@ -31,7 +32,7 @@ const OurArticleSection = () => {
           />
         </div>
       </Container>
-    </div>
+    </SectionContainer>
   );
 };
 

@@ -3,6 +3,7 @@ import { Categories } from "../data/menu.js";
 import CategoryBtn from "./CategoryBtn.jsx";
 import CartSection from "./CartSection.jsx";
 import ClientFeedbackSection from "../../../components/sectionComponents/ClientFeedbackSection.jsx";
+import SectionContainer from "../../../components/SectionContainer.jsx";
 
 const CategorySection = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -10,8 +11,8 @@ const CategorySection = () => {
     setSelectedCategory(categoryName);
   };
   return (
-    <section>
-      <main className=" py-[180px] max-[843px]:py-[120px] border-y border-stroke-1-color">
+    <SectionContainer>
+      <main>
         <ul className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-10 w-full md:w-fit max-md:px-12 mx-auto mb-16">
           {Categories.map((category) => (
             <CategoryBtn
@@ -25,7 +26,7 @@ const CategorySection = () => {
         <CartSection selectedCategory={selectedCategory} />
        
       </main>
-    </section>
+    </SectionContainer>
   );
 };
 

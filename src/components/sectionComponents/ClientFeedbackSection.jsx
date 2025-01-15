@@ -11,6 +11,7 @@ import Container from "../Container";
 import testAvatar1 from "../../assets/MyanShi/Avatar/testAvatar1.png";
 import useCarousel from "../../hooks/useCarouse";
 import { motion } from "framer-motion";
+import SectionContainer from "../SectionContainer";
 
 const ClientFeedbackSection = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -26,12 +27,7 @@ const ClientFeedbackSection = () => {
   const currentData = data[currentIndex];
 
   return (
-    <div
-      ref={ref}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      className=" py-[180px] max-[1000px]:py-[120px] border-y border-stroke-1-color 0"
-    >
+    <SectionContainer>
       <Container>
         <div
           className={`grid grid-flow-col grid-cols-3 max-[1000px]:grid-cols-1 max-[1000px]:grid-flow-row  h-full gap-10  max-[1200px]:px-2`}
@@ -63,6 +59,9 @@ const ClientFeedbackSection = () => {
           </div>
 
           <motion.div
+            ref={ref}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
             key={currentData?.img}
             initial={{ opacity: 0.8, x: 0 }}
             animate={{ opacity: 1, x: 0 }}
@@ -109,7 +108,7 @@ const ClientFeedbackSection = () => {
           </div>
         </div>
       </Container>
-    </div>
+    </SectionContainer>
   );
 };
 

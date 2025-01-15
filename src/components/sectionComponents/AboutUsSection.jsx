@@ -3,13 +3,14 @@ import checkIcon from "../../assets/MyanShi/AboutUs/check.png";
 import imageOne from "../../assets/MyanShi/AboutUs/restaurant-image-1.png";
 import imageTwo from "../../assets/MyanShi/AboutUs/restaurant-image-2.png";
 import Container from "../Container";
+import SectionContainer from "../SectionContainer";
 import JapaneseText from "../typography/JapaneseText";
 import Paragraph from "../typography/Paragraph";
 import PrimaryHeader from "../typography/PrimaryHeader";
 
 const AboutUsSection = () => {
   return (
-    <section className=" relative py-[180px] max-[843px]:py-[120px] border-y border-stroke-1-color max-[1200px]:px-2">
+    <SectionContainer>
       <div className=" z-10">
         <Container>
           {/* <div className="  grid lg:grid-cols-2 h-auto">
@@ -75,7 +76,6 @@ const AboutUsSection = () => {
                 className="size-full sm:col-span-2 sm:row-start-1 sm:row-end-5 sm:z-10 object-cover"
               />
 
-              {/* Founded Section */}
               <div className="grid place-items-center bg-primary-color text-white py-4">
                 <div className="font-notoSerifJp text-heading2 sm:text-heading1">
                   2019
@@ -83,7 +83,6 @@ const AboutUsSection = () => {
                 <div className="font-satoshi">founded</div>
               </div>
 
-              {/* Team Members Section */}
               <div className="grid place-items-center shadow-md bg-white py-4">
                 <div className="font-notoSerifJp text-heading2 sm:text-heading1">
                   64+
@@ -95,17 +94,14 @@ const AboutUsSection = () => {
               <img
                 src={imageTwo}
                 alt="restaurant image"
-                className="size-full sm:col-start-3 sm:col-end-5 sm:row-start-2 sm:row-end-6 object-cover"
+                className="size-full sm:col-start-3 sm:col-end-5 sm:row-start-2 sm:row-end-6 object-cover z-10"
               />
             </div>
 
             <div className="pt-16 lg:w-[80%] lg:mx-auto z-10">
               <div className="flex flex-col gap-6">
-                {/* Section Title */}
                 <JapaneseText>私たちについて</JapaneseText>
                 <PrimaryHeader>About Us</PrimaryHeader>
-
-                {/* About Us Description */}
                 <Paragraph>
                   Founded in Yangon, Myanmar, in 2019, MYANSHI has been
                   dedicated to providing exceptional products and services. With
@@ -116,7 +112,6 @@ const AboutUsSection = () => {
                 </Paragraph>
               </div>
 
-              {/* About Us Data */}
               <div className="pt-10">
                 {aboutUsData.map((item, index) => (
                   <div className="flex gap-3 mb-3" key={index}>
@@ -136,9 +131,9 @@ const AboutUsSection = () => {
       <img
         src={waves}
         alt="waves image"
-        className="size-60 hidden sm:block absolute bottom-0 z-0 "
+        className="size-[300px] sm:block absolute bottom-8 max-[843px]:bottom-[500px] max-sm:hidden z-0 "
       />
-    </section>
+    </SectionContainer>
   );
 };
 

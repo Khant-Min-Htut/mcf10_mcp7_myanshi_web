@@ -3,9 +3,9 @@
 const DesktopCarouselCard = ({ currentIndex, data }) => {
   return (
     <div className="relative mt-10 ">
-      <div className="absolute right-full top-0 h-full w-[300px] bg-background-color z-10"></div>
+      <div className="absolute right-full top-0 h-full w-[3000px] bg-background-color z-10"></div>
       <div
-        className="flex transition-transform duration-500 "
+        className="flex items-center transition-transform duration-500 "
         style={{
           transform: `translateX(-${currentIndex * 100}%)`,
         }}
@@ -13,14 +13,14 @@ const DesktopCarouselCard = ({ currentIndex, data }) => {
         {data.map((item, index) => (
           <div
             key={index}
-            className="w-full flex-shrink-0 relative lg:h-[900px]"
+            className="w-full flex-shrink-0 relative lg:max-h-[800px] md:max-h-[600px] overflow-hidden"
           >
             <img
               src={item.image}
               alt={item.title}
               className="object-cover h-[80%] w-[70%]"
             />
-            <div className="p-10 py-14 lg:p-14 lg:left-[550px] absolute top-20 left-80 bg-header-color text-white lg:top-52 ">
+            <div className="p-10 py-14 lg:p-14   lg:left-[550px] absolute top-20 left-80 bg-header-color text-white lg:top-52 right-4 ">
               <h3 className="text-heading1 font-notoSerifJp pb-8">
                 {item.title}
               </h3>

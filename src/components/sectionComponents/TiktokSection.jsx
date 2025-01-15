@@ -9,10 +9,11 @@ import Img5 from "../../assets/MyanShi/OurTitok/titokImg5.png";
 import JapaneseText from "../typography/JapaneseText";
 import PrimaryHeader from "../typography/PrimaryHeader";
 import tiktokLogoFill from "../../assets/MyanShi/OurTitok/tiktok-logo-fill.svg";
+import SectionContainer from "../SectionContainer";
 
 const TiktokSection = () => {
   return (
-    <section className=" py-[180px] max-[843px]:py-[120px] border-y border-stroke-1-color max-[1200px]:px-2 ">
+    <SectionContainer>
       <Container>
         <div className=" h-full w-full  flex flex-col justify-center items-center gap-10">
           <div className=" text-center flex flex-col gap-6 ">
@@ -64,7 +65,7 @@ const TiktokSection = () => {
           </div>
         </div>
       </Container>
-    </section>
+    </SectionContainer>
   );
 };
 
