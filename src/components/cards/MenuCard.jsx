@@ -9,16 +9,16 @@ const MenuCard = ({
   promotionPercent,
 }) => {
   return (
-    <div className="max-w-[282px] max-h-[466px] relative">
+    <div className="max-w-[282px] max-h-[466px] relative flex flex-col justify-between">
       {promotionPercent && (
         <p className="text-[16px] leading-[21.6px] font-[700] text-white font-satoshi  uppercase bg-primary-color absolute top-0 right-0 px-2 text-center z-10 w-full h-full max-h-[50px] max-w-[72px] flex items-center justify-center ">
           {promotionPercent}
         </p>
       )}
 
-      <div className="w-full min-w-[282px] min-h-[373px] relative overflow-hidden">
+      <div className="w-full min-w-[282px] max-h-[373px] relative overflow-hidden">
         <img
-          className=" h-4/5 min-w-[282px] min-h-[373px] object-cover relative transition-all duration-300 hover:scale-110"
+          className=" min-w-[282px] h-[373px] bg-red-200 object-cover relative transition-all duration-300 hover:scale-110"
           src={image}
         />
       </div>
