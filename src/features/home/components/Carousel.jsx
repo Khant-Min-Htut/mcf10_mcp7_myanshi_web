@@ -39,7 +39,7 @@ const Carousel = ({ menuItems }) => {
   return (
     <div className="flex flex-col gap-12 w-full">
       <div className="flex relative">
-        <div className="absolute right-full top-0 h-full w-[200px] bg-background-color z-10"></div>
+        <div className="absolute right-full top-0 h-full w-[2000px] bg-background-color z-10"></div>
         <div
           ref={ref}
           onMouseEnter={handleMouseEnter}
