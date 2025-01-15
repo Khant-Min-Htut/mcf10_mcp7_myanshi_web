@@ -1,26 +1,32 @@
 import sushi from "../../../assets/ShushiIcon.png";
+import Container from "../../../components/Container";
+import SectionContainer from "../../../components/SectionContainer";
 
 const Hero = () => {
   return (
-    <div className="grid gap-10  px-3  sm:mx-auto lg:grid-cols-3 lg:gap-5 lg:py-20">
-      {heroData.map((item, index) => (
-        <div className="flex gap-6" key={index}>
-          <img
-            src={item.image}
-            alt={item.title}
-            className="size-10 sm:size-11"
-          />
-          <div>
-            <h2 className="text-heading3 sm:text-heading2 font-notoSerifJp ">
-              {item.title}
-            </h2>
-            <p className="text-neutral-500 sm:text-bodyDefault">
-              {item.description}
-            </p>
-          </div>
+    <SectionContainer>
+      <Container>
+        <div className="grid gap-10  px-3 lg:grid-cols-3 lg:gap-5">
+          {heroData.map((item, index) => (
+            <div className="flex gap-6" key={index}>
+              <img
+                src={item.image}
+                alt={item.title}
+                className="size-10 sm:size-11"
+              />
+              <div>
+                <h2 className="text-heading3 sm:text-heading2 font-notoSerifJp ">
+                  {item.title}
+                </h2>
+                <p className="text-neutral-500 sm:text-bodyDefault">
+                  {item.description}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
+      </Container>
+    </SectionContainer>
   );
 };
 

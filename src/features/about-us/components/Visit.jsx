@@ -8,6 +8,8 @@ import imageTwo from "../../../assets/MyanShi/AboutUs/restaurant-image-2.png";
 import imageThree from "../../../assets/MyanShi/AboutUs/restaurant-image-3.png";
 import right from "../../../assets/MyanShi/AboutUs/right-arrow-svgrepo-com.svg";
 import CarouselCard from "./CarouselCard";
+import JapaneseText from "../../../components/typography/JapaneseText";
+import PrimaryHeader from "../../../components/typography/PrimaryHeader";
 
 const Visit = ({ isContactPage }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -28,11 +30,9 @@ const Visit = ({ isContactPage }) => {
   }, []);
 
   return (
-    <div className={`${!isContactPage && "pb-28"} px-3`}>
-      <h2 className="font-satoshi text-bodyDefault text-primary-color">
-        レストラン
-      </h2>
-      <h2 className="text-heading2 font-notoSerifJp">Visit Our Restaurants</h2>
+    <div className={` px-3`}>
+      <JapaneseText>レストラン</JapaneseText>
+      <PrimaryHeader>Visit Our Restaurants</PrimaryHeader>
       <CarouselCard currentIndex={currentIndex} data={data} />
       <div className="flex items-center gap-4 justify-center mt-10">
         <button

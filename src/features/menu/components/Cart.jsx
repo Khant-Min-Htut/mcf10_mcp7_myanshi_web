@@ -11,23 +11,18 @@ const Cart = ({ image, title, originalPrice, promotionPrice, promotion }) => {
           {promotion}%
         </div>
       )}
-      <a href="">
-        <div className=" overflow-hidden">
-          <img
-            className="h-4/5 min-w-[282px] min-h-[373px]  object-cover hover:scale-110 transition-transform duration-200 ease-in-out"
-            style={{ transformOrigin: "center" }}
-            src={image}
-            alt={title}
-          />
-        </div>
-      </a>
+
+      <div className="w-full min-w-[282px] max-h-[373px] relative overflow-hidden">
+        <img
+          className=" min-w-[282px] h-[373px] bg-red-200 object-cover relative transition-all duration-300 hover:scale-110"
+          src={image}
+        />
+      </div>
 
       <div className="py-5">
-        <a href="#">
-          <h5 className="mb-2 text-2xl font-bold tracking-tight text-neutral-800 hover:text-primary-color transition-all duration-100 ease-in-out">
-            {title}
-          </h5>
-        </a>
+        <h5 className="mb-2 text-2xl font-bold tracking-tight text-neutral-800 hover:text-primary-color transition-all duration-100 ease-in-out">
+          {title}
+        </h5>
         <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 space-x-5">
           <span className="text-primary-color text-bodyLarge font-satoshi font-bold">
             {Number(promotionPrice).toLocaleString()} MMK

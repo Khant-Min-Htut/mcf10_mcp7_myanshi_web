@@ -11,42 +11,35 @@ import OurTeam from "../components/OurTeam";
 import OurTiktok from "../components/OurTiktok";
 import Visit from "../components/Visit";
 import VisitDesktop from "../components/VisitDesktop";
+import VisitDesktopSection from "../../../components/sectionComponents/VisitDesktopSection";
 
 const About = () => {
   const isDesktop = useMediaQuery("(min-width : 768px)");
 
   return (
-    <section>
+    <main>
       <HeroSection
         isBreadCrumb={true}
         currentPage="About Us"
         title="We are MYANSHI"
       />
-      <div className="space-y-28 pt-28">
-        <Container>
-          <Hero />
-        </Container>
-        {/* <hr className="border-b-2 border-stroke-1-color" /> */}
-        {/* <Container> */}
+      <div className="">
+        <Hero />
         <AboutUs />
-        {/* </Container> */}
-        {/* <hr className="border-b-2 border-stroke-1-color" /> */}
-        <Container>
-          <MyJourney />
-        </Container>
-        <hr className="border-b-2 border-stroke-1-color" />
-        <Container>
-          <OurTeam />
-        </Container>
-        <hr className="border-b-2 border-stroke-1-color" />
-        <Container>{isDesktop ? <VisitDesktop /> : <Visit />}</Container>
-        {/* <hr className="border-b-2 border-stroke-1-color" /> */}
-        {/* <Container> */}
+        <MyJourney />
+        <OurTeam />
+        <VisitDesktopSection />
         <OurTiktok />
-        {/* </Container> */}
       </div>
-    </section>
+    </main>
   );
 };
 
 export default About;
+
+{
+  /* {isDesktop ? <VisitDesktop /> : <Visit />} */
+}
+{
+  /* <hr className="border-b-2 border-stroke-1-color" /> */
+}

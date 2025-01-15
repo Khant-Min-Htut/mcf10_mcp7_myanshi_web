@@ -11,9 +11,10 @@ import DesktopCarouselCard from "../../features/about-us/components/DesktopCarou
 import Container from "../Container";
 import { useMediaQuery } from "../../hooks/useMediaQuery";
 import Visit from "../../features/about-us/components/Visit";
+import SectionContainer from "../SectionContainer";
 // import DesktopCarouselCard from "./DesktopCarouselCard";
 
-const VisitDesktopSection = ({isContactPage}) => {
+const VisitDesktopSection = ({ isContactPage }) => {
   const isDesktop = useMediaQuery("(min-width : 768px)");
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -32,44 +33,46 @@ const VisitDesktopSection = ({isContactPage}) => {
     return () => clearInterval(interval);
   }, []);
 
-
-
   return (
-    <div className=" py-[180px] max-[843px]:py-[120px] border-y border-stroke-1-color max-[1200px]:px-2">
+    <SectionContainer>
       <Container>
         <div className="flex justify-between items-end">
-          {
-            isDesktop &&<>
-            <div>
-            <h2 className="font-satoshi sm:text-bodyLarge text-bodyDefault text-primary-color">
-              レストラン
-            </h2>
-            <h2 className=" font-notoSerifJp text-heading2 sm:text-display4 lg:text-display2">
-              Visit Our Restaurants
-            </h2>
-          </div>
-          <div className="flex items-center gap-4 justify-center ">
-            <button
-              type="button"
-              onClick={prevSlide}
-              className="size-12 bg-background-color border-header-color border rounded-full flex items-center justify-center hover:bg-neutral-500 duration-300 transition-colors"
-            >
-              <img src={left} alt="left" className="size-5" />
-            </button>
-            <button
-              type="button"
-              onClick={nextSlide}
-              className="size-12 bg-primary-color rounded-full flex items-center justify-center"
-            >
-              <img src={right} alt="right" className="size-4" />
-            </button>
-          </div>
-          </>
-          }
+          {isDesktop && (
+            <>
+              <div>
+                <h2 className="font-satoshi sm:text-bodyLarge text-bodyDefault text-primary-color">
+                  レストラン
+                </h2>
+                <h2 className=" font-notoSerifJp text-heading2 sm:text-display4 lg:text-display2">
+                  Visit Our Restaurants
+                </h2>
+              </div>
+              <div className="flex items-center gap-4 justify-center ">
+                <button
+                  type="button"
+                  onClick={prevSlide}
+                  className="size-12 bg-background-color border-header-color border rounded-full flex items-center justify-center hover:bg-neutral-500 duration-300 transition-colors"
+                >
+                  <img src={left} alt="left" className="size-5" />
+                </button>
+                <button
+                  type="button"
+                  onClick={nextSlide}
+                  className="size-12 bg-primary-color rounded-full flex items-center justify-center"
+                >
+                  <img src={right} alt="right" className="size-4" />
+                </button>
+              </div>
+            </>
+          )}
         </div>
-        {isDesktop ? <DesktopCarouselCard currentIndex={currentIndex} data={data} /> : <Visit isContactPage={true}/>}
+        {isDesktop ? (
+          <DesktopCarouselCard currentIndex={currentIndex} data={data} />
+        ) : (
+          <Visit />
+        )}
       </Container>
-    </div>
+    </SectionContainer>
   );
 };
 
