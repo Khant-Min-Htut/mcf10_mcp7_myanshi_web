@@ -25,7 +25,7 @@ const PromotionsSection = () => {
             </Paragraph>
             <SolidBtn text="SEE ALL" />
           </div>
-          <Carousel menuItems={cardData} cardsPerView={3} showData={10} />
+          <Carousel menuItems={cardData} showData={10} />
         </div>
       </Container>
     </section>
