@@ -6,12 +6,15 @@ import CallNowBtn from "../../buttons/CallNowBtn";
 const Dropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
   const ref = useRef(null);
+  const dropdownRef = useRef(null);
 
   const handleClickOutside = (e) => {
-    if (ref.current && !ref.current.contains(e.target)) {
+    if (ref.current && !ref.current.contains(e.target) && !dropdownRef.current.contains(e.target)) {
       setIsOpen(false);
     }
   };
+
+
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
@@ -24,16 +27,18 @@ const Dropdown = () => {
       <nav className=" mx-auto  text-white px-4 py-4 relative z-50 bg-header-color">
         <div className="flex  items-center justify-between z-50  w-full h-full">
           <div className="flex items-center gap-2 z-50">
-            <Link to="/" className="absolute w-32">
-              <SushiIcon />
-            </Link>
+            <span>
+              <Link to="/" className=" w-32">
+                <SushiIcon />
+              </Link>
+            </span>
             <span className="font-notoSerifJp text-white text-heading3 font-black">
               MYANSHI
             </span>
           </div>
 
           <button
-            // ref={ref}
+            ref={dropdownRef}
             className="block md:hidden text-white focus:outline-none z-50"
           >
             {isOpen ? (
