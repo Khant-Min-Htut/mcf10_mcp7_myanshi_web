@@ -7,7 +7,7 @@ import Imgs from "../../features/home/data/Imgs";
 import BreadCrumb from "../BreadCrumb";
 import ContactCard from "../cards/ContactCard";
 import Container from "../Container";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const HeroSection = ({
   isBreadCrumb,
@@ -42,7 +42,7 @@ const HeroSection = ({
         )}
 
         <div
-          className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center w-full max-w-[1200px] flex flex-col gap-8 
+          className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center w-full max-w-[1200px] flex flex-col gap-6 
             max-[843px]:gap-4 justify-center items-center ${
               isHomePage &&
               "max-[400px]:justify-start max-[400px]:text-start max-[400px]:items-start"
@@ -62,7 +62,7 @@ const HeroSection = ({
           )}
 
           <h1
-            className={`mx-10 font-notoSerifJp text-neutral-100 font-light  text-display1 max-[834px]:text-display3 max-sm:text-heading1 max-sm:w-full ${
+            className={` font-notoSerifJp text-neutral-100 font-light  text-display1 max-[834px]:text-display3 max-sm:text-heading1 max-sm:w-full ${
               isContactPage && "max-[1105px]:text-display3  "
             }`}
           >
@@ -78,10 +78,14 @@ const HeroSection = ({
                 and modern twists, only at MYANSHI.
               </p>
               <div className=" flex mx-auto gap-4 max-[400px]:flex-col max-[400px]:w-full max-[400px]:text-bodyDefault ">
-                <SolidBtn
-                  text="Book A Table"
-                  className={"max-[400px]:w-full max-[400px]:h-[54px]"}
-                />
+                <Link to="/contact">
+                  <SolidBtn
+                    text="Order Now"
+                    className={
+                      "max-[400px]:w-full mx-auto max-[400px]:text-bodySmall max-[400px]:h-[54px]"
+                    }
+                  />
+                </Link>
                 <OutLineBtn
                   onClick={() => nav("/menu")}
                   text="Our Menu"
@@ -90,7 +94,7 @@ const HeroSection = ({
                   }
                 />
               </div>
-              <div className="max-sm:w-full flex justify-center mt-[20px]">
+              <div className="max-sm:w-full flex justify-center mt-[10px]">
                 <AnimatedButton sectionName="BrowseMenuSection" />
               </div>
             </>

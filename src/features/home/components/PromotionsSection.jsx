@@ -11,8 +11,10 @@ import JapaneseText from "../../../components/typography/JapaneseText";
 import PrimaryHeader from "../../../components/typography/PrimaryHeader";
 import Paragraph from "../../../components/typography/Paragraph";
 import SectionContainer from "../../../components/SectionContainer";
+import { useNavigate } from "react-router-dom";
 
 const PromotionsSection = () => {
+  const nav = useNavigate();
   return (
     <SectionContainer>
       <Container>
@@ -24,7 +26,7 @@ const PromotionsSection = () => {
               Celebrate the holiday season with our Christmas promotion from
               25th to 31th. Enjoy festive deals and limited-time offers!
             </Paragraph>
-            <SolidBtn text="SEE ALL" />
+            <SolidBtn onClick={() => nav("/menu")} text="SEE ALL" />
           </div>
           <Carousel menuItems={cardData} showData={10} />
         </div>
