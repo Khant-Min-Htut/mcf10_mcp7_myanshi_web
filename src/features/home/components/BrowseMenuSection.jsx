@@ -11,6 +11,7 @@ import SecondaryHeader from "../../../components/typography/SecondaryHeader";
 import RoundedBtn from "../../../buttons/RoundedBtn";
 import SectionContainer from "../../../components/SectionContainer";
 import { div } from "framer-motion/client";
+import { Link } from "react-router-dom";
 
 const BrowseMenuSection = () => {
   const { bg_img } = Imgs();
@@ -29,7 +30,9 @@ const BrowseMenuSection = () => {
                     fresh sushi to savory dishes, refreshing drinks, and
                     delightful desserts.
                   </Paragraph>
-                  <SolidBtn text="SEE MORE" />
+                  <Link to="/menu">
+                    <SolidBtn text="SEE MORE" />
+                  </Link>
                 </div>
                 <div className=" col-span-1">
                   {/* <img src="" alt="" /> */}

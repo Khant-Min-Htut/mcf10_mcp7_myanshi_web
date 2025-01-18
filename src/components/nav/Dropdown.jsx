@@ -156,7 +156,7 @@ const Dropdown = () => {
           >
             BLOG
           </Link>
-          <CallNowBtn text="CALL NOW" />
+          <CallNowBtn text="CALL NOW" phoneNumber="09784224472" />
         </div>
       </div>
     </>

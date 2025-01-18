@@ -6,7 +6,9 @@ import Container from "../Container";
 import ArticlesCard from "../cards/ArticlesCard";
 import img from "../../assets/MyanShi/OurTitok/titokImg2.png";
 import SectionContainer from "../SectionContainer";
+import { useNavigate } from "react-router-dom";
 const OurArticleSection = () => {
+  const nav = useNavigate();
   return (
     <SectionContainer>
       <Container>
@@ -17,6 +19,7 @@ const OurArticleSection = () => {
               <PrimaryHeader>Our Articles</PrimaryHeader>
             </div>
             <OutLineBtn
+              onClick={() => nav("/blog")}
               dark={true}
               text={"READ MORE"}
               className={"text-neutral-700 border-neutral-700   "}

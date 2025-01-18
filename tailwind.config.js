@@ -8,7 +8,7 @@ export default {
     extend: {
       fontFamily: {
         satoshi: ["Satoshi", "sans-serif"],
-        notoSerifJp: ["Noto Serif JP", "serif"],
+        notoSerifJp: ["Noto Serif", "serif"],
       },
       colors: {
         "primary-color": "#CE3319", // red
