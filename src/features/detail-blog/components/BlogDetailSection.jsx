@@ -53,6 +53,13 @@ const BlogDetailSection = () => {
           serve it with soy sauce, wasabi, and pickled ginger for a complete
           sushi experience.
         </p>
+        {/* <div className="relative overflow-hidden w-full aspect-[16/9]">
+          <img
+            src={blogImg1}
+            alt=""
+            className="w-full h-full object-cover relative transition-all duration-300 hover:scale-110"
+          />
+        </div> */}
         <img
           src={blogImg1}
           alt=""
