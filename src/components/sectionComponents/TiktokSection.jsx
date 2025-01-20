@@ -6,16 +6,14 @@ import Img2 from "../../assets/MyanShi/OurTitok/titokImg2.png";
 import Img3 from "../../assets/MyanShi/OurTitok/titokImg3.png";
 import Img4 from "../../assets/MyanShi/OurTitok/titokImg4.png";
 import Img5 from "../../assets/MyanShi/OurTitok/titokImg5.png";
-import { img } from "framer-motion/m";
 import JapaneseText from "../typography/JapaneseText";
 import PrimaryHeader from "../typography/PrimaryHeader";
-import tiktokLogo from "../../assets/MyanShi/AboutUs/tiktok-logo.svg";
-import { GrTiktok } from "react-icons/gr";
-import { FaTiktok } from "react-icons/fa";
+import tiktokLogoFill from "../../assets/MyanShi/OurTitok/tiktok-logo-fill.svg";
+import SectionContainer from "../SectionContainer";
 
 const TiktokSection = () => {
   return (
-    <section className=" py-[180px] max-[843px]:py-[120px] border-y border-stroke-1-color max-[1200px]:px-2 ">
+    <SectionContainer>
       <Container>
         <div className=" h-full w-full  flex flex-col justify-center items-center gap-10">
           <div className=" text-center flex flex-col gap-6 ">
@@ -31,7 +29,7 @@ const TiktokSection = () => {
                 className="w-full object-cover hover:cursor-pointer"
               />
               <div className=" absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50">
-                <FaTiktok className=" z-50 text-6xl text-white transform -rotate-12 group-hover:rotate-0 transition-all duration-300 opacity-0 group-hover:opacity-100 size-14 " />
+              <img src={tiktokLogoFill} alt="" className="z-50 text-6xl text-white transform -rotate-12 group-hover:rotate-0 transition-all duration-500 opacity-0 group-hover:opacity-100  size-14"/>
               </div>
               <div
                 // href="#"
@@ -50,7 +48,8 @@ const TiktokSection = () => {
                     alt={`Image ${index + 1}`}
                   />
                   <div className=" absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50">
-                    <FaTiktok className=" z-50 text-6xl text-white transform -rotate-12 group-hover:rotate-0 transition-all duration-500 opacity-0 group-hover:opacity-100  size-14" />
+                 
+                    <img src={tiktokLogoFill} alt="" className="z-50 text-6xl text-white transform -rotate-12 group-hover:rotate-0 transition-all duration-500 opacity-0 group-hover:opacity-100  size-14"/>
                   </div>
                   <div
                     // href="#"
@@ -66,7 +65,7 @@ const TiktokSection = () => {
           </div>
         </div>
       </Container>
-    </section>
+    </SectionContainer>
   );
 };
 

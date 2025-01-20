@@ -10,10 +10,13 @@ import Carousel from "./Carousel";
 import JapaneseText from "../../../components/typography/JapaneseText";
 import PrimaryHeader from "../../../components/typography/PrimaryHeader";
 import Paragraph from "../../../components/typography/Paragraph";
+import SectionContainer from "../../../components/SectionContainer";
+import { useNavigate } from "react-router-dom";
 
 const PromotionsSection = () => {
+  const nav = useNavigate();
   return (
-    <section className=" py-[180px] max-[843px]:py-[120px] border-y border-stroke-1-color">
+    <SectionContainer>
       <Container>
         <div className=" flex flex-col gap-12 my-16 max-[1200px]:px-2">
           <div className=" w-full col-span-1 flex flex-col gap-6 ">
@@ -23,12 +26,12 @@ const PromotionsSection = () => {
               Celebrate the holiday season with our Christmas promotion from
               25th to 31th. Enjoy festive deals and limited-time offers!
             </Paragraph>
-            <SolidBtn text="SEE ALL" />
+            <SolidBtn onClick={() => nav("/menu")} text="SEE ALL" />
           </div>
-          <Carousel menuItems={cardData} cardsPerView={3} showData={10} />
+          <Carousel menuItems={cardData} showData={10} />
         </div>
       </Container>
-    </section>
+    </SectionContainer>
   );
 };
 

@@ -8,6 +8,8 @@ import imageTwo from "../../../assets/MyanShi/AboutUs/restaurant-image-2.png";
 import imageThree from "../../../assets/MyanShi/AboutUs/restaurant-image-3.png";
 import right from "../../../assets/MyanShi/AboutUs/right-arrow-svgrepo-com.svg";
 import DesktopCarouselCard from "./DesktopCarouselCard";
+import SectionContainer from "../../../components/SectionContainer";
+import Container from "../../../components/Container";
 
 const VisitDesktop = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -28,7 +30,7 @@ const VisitDesktop = () => {
   }, []);
 
   return (
-    <div className="px-3 lg:pt-10">
+    <Container>
       <div className="flex justify-between items-end">
         <div>
           <h2 className="font-satoshi sm:text-bodyLarge text-bodyDefault text-primary-color">
@@ -56,7 +58,7 @@ const VisitDesktop = () => {
         </div>
       </div>
       <DesktopCarouselCard currentIndex={currentIndex} data={data} />
-    </div>
+    </Container>
   );
 };
 

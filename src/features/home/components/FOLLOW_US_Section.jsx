@@ -4,8 +4,10 @@ import SolidBtn from "../../../buttons/SolidBtn";
 import OutLineBtn from "../../../buttons/OutLineBtn";
 import Container from "../../../components/Container";
 import bgImg from "../../../assets/MyanShi/Home/adsAbsoluteImg.png";
+import { useNavigate } from "react-router-dom";
 
 const FOLLOW_US_Section = () => {
+  const nav = useNavigate();
   return (
     <div className="w-full flex justify-center max-[400px]:max-h-[500px] max-[843px]:min-h-[463px] max-h-[800px] relative">
       <img
@@ -21,7 +23,7 @@ const FOLLOW_US_Section = () => {
           </h1>
           <div className=" flex flex-col grow-0 gap-2 max-[843px]:flex-row max-[843px]:gap-4 max-[400px]:flex-col w-full items-center justify-center min-[843px]:w-2/4 ">
             <SolidBtn text={"ORDER NOW"} className={"max-[400px]:w-full"} />
-            <OutLineBtn text={"OUR MENU"} className={"max-[400px]:w-full"} />
+            <OutLineBtn onClick={() => nav("/menu")} text={"OUR MENU"} className={"max-[400px]:w-full"} />
           </div>
         </div>
       </div>

@@ -24,7 +24,7 @@ const ArticlesCard = ({date,title,description,img}) => {
         <Paragraph>
           {description}
         </Paragraph>
-        <Link className="flex items-center gap-2 max-[400px]:text-bodyDefault text-bodyLarge text-neutral-800 mt-3">
+        <Link to={`/blog/${1}`} className="flex items-center gap-2 max-[400px]:text-bodyDefault text-bodyLarge text-neutral-800 mt-3">
           <span className=" group-hover:text-primary-color">READ MORE</span>{" "}
           <GoChevronRight className="size-8 group-hover:text-primary-color transform group-hover:translate-x-1 duration-300" />
         </Link>

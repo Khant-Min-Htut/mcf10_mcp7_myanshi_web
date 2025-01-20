@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import JapaneseText from "../typography/JapaneseText";
 import PrimaryHeader from "../typography/PrimaryHeader";
 import Paragraph from "../typography/Paragraph";
@@ -11,17 +11,23 @@ import Container from "../Container";
 import testAvatar1 from "../../assets/MyanShi/Avatar/testAvatar1.png";
 import useCarousel from "../../hooks/useCarouse";
 import { motion } from "framer-motion";
+import SectionContainer from "../SectionContainer";
 
 const ClientFeedbackSection = () => {
+  const [isHovered, setIsHovered] = useState(false);
+  const ref = useRef(null);
+  const handleMouseEnter = () => setIsHovered(true);
+  const handleMouseLeave = () => setIsHovered(false);
   const cardsPerView = 1;
   const { currentIndex, nextSlide, prevSlide } = useCarousel(
     data,
-    cardsPerView
+    cardsPerView,
+    isHovered
   );
   const currentData = data[currentIndex];
 
   return (
-    <div className=" py-[180px] max-[1000px]:py-[120px] border-y border-stroke-1-color 0">
+    <SectionContainer>
       <Container>
         <div
           className={`grid grid-flow-col grid-cols-3 max-[1000px]:grid-cols-1 max-[1000px]:grid-flow-row  h-full gap-10  max-[1200px]:px-2`}
@@ -37,7 +43,7 @@ const ClientFeedbackSection = () => {
                   atmosphere, their words reflect our dedication to excellence.
                 </Paragraph>
               </div>
-              <div className="flex gap-2 items-start max-[500px]:hidden ">
+              <div className="flex gap-4 items-start max-sm:hidden ">
                 <RoundedBtn
                   leftArrow={true}
                   outline={true}
@@ -53,11 +59,14 @@ const ClientFeedbackSection = () => {
           </div>
 
           <motion.div
-            key={currentData?.img} // Key changes when currentData?.img changes
+            ref={ref}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            key={currentData?.img}
             initial={{ opacity: 0.8, x: 0 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
-            className=" col-span-2 flex max-[500px]:flex-col gap-2 items-center"
+            className=" col-span-2 flex max-[500px]:flex-col gap-4 items-center"
           >
             <img
               src={currentData?.img || "/fallback-image.jpg"}
@@ -84,9 +93,12 @@ const ClientFeedbackSection = () => {
             </div>
           </motion.div>
 
-          <div className="w-full flex items-center justify-center">
-            <div className="flex gap-4 items-start min-[500px]:hidden ">
+          <div className=" flex w-full sm:hidden  items-center justify-center">
+            <div className=" gap-4 items-center justify-center flex">
+              {/* Previous Slide Button */}
               <RoundedBtn leftArrow={true} outline={true} onClick={prevSlide} />
+
+              {/* Next Slide Button */}
               <RoundedBtn
                 rightArrow={true}
                 outline={false}
@@ -94,10 +106,9 @@ const ClientFeedbackSection = () => {
               />
             </div>
           </div>
-
         </div>
       </Container>
-    </div>
+    </SectionContainer>
   );
 };
 
