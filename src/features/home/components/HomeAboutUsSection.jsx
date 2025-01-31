@@ -4,7 +4,7 @@ import AboutUsSection from '../../../components/sectionComponents/AboutUsSection
 const HomeAboutUsSection = () => {
   return (
     <>
-    <AboutUsSection/>
+    <AboutUsSection isHomePage={true}/>
     </>
   )
 }

@@ -12,6 +12,7 @@ import RoundedBtn from "../../../buttons/RoundedBtn";
 import SectionContainer from "../../../components/SectionContainer";
 import { div } from "framer-motion/client";
 import { Link } from "react-router-dom";
+import Content1 from "../../../components/typography/Content1";
 
 const BrowseMenuSection = () => {
   const { bg_img } = Imgs();
@@ -22,7 +23,16 @@ const BrowseMenuSection = () => {
           <Container>
             <div className=" flex items-center">
               <div className=" grid grid-flow-col grid-cols-2 max-[843px]:grid-cols-1 max-[843px]:grid-flow-row max-[1200px]:px-4 gap-4  items-start ">
-                <div className=" col-span-1 flex flex-col gap-6 ">
+                <Content1
+                  japanesText={"メニュー"}
+                  title={"Browse Menu"}
+                  text={
+                    "Discover our selection of authentic Japanese flavors, from fresh sushi to savory dishes, refreshing drinks, and delightful desserts."
+                  }
+                  buttonText={"SEE MORE"}
+                  isBrowse
+                />
+                {/* <div className=" col-span-1 flex flex-col gap-6 ">
                   <JapaneseText>メニュー</JapaneseText>
                   <PrimaryHeader>Browse Menu</PrimaryHeader>
                   <Paragraph>
@@ -33,7 +43,7 @@ const BrowseMenuSection = () => {
                   <Link to="/menu">
                     <SolidBtn text="SEE MORE" />
                   </Link>
-                </div>
+                </div> */}
                 <div className=" col-span-1">
                   {/* <img src="" alt="" /> */}
                   {data.map((i) => (
@@ -46,7 +56,7 @@ const BrowseMenuSection = () => {
                           <div className=" h-full flex items-start pt-1 min-w-[43px]">
                             <img src={SushiIcon} alt="" className=" w-[43px]" />
                           </div>
-                          <div>
+                          <div className=" flex flex-col gap-2">
                             <SecondaryHeader>{i.title}</SecondaryHeader>
                             <Paragraph>{i.description}</Paragraph>
                           </div>

@@ -1,30 +1,22 @@
 import React from "react";
-import JapaneseText from "../typography/JapaneseText";
-import PrimaryHeader from "../typography/PrimaryHeader";
-import OutLineBtn from "../../buttons/OutLineBtn";
 import Container from "../Container";
 import ArticlesCard from "../cards/ArticlesCard";
-import img from "../../assets/MyanShi/OurTitok/titokImg2.png";
+import img from "../../assets/MyanShi/Home/sushiImg.png";
 import SectionContainer from "../SectionContainer";
 import { useNavigate } from "react-router-dom";
+import Content1 from "../typography/Content1";
 const OurArticleSection = () => {
   const nav = useNavigate();
   return (
     <SectionContainer>
       <Container>
         <div className=" flex flex-col gap-12">
-          <div className=" flex justify-between items-center">
-            <div>
-              <JapaneseText>ブログ</JapaneseText>
-              <PrimaryHeader>Our Articles</PrimaryHeader>
-            </div>
-            <OutLineBtn
-              onClick={() => nav("/blog")}
-              dark={true}
-              text={"READ MORE"}
-              className={"text-neutral-700 border-neutral-700   "}
-            />
-          </div>
+          <Content1
+            title="Our Articles"
+            japanesText="ブログ"
+            onClick={() => nav("/blog")}
+            outlinebuttonText="ALL ARTICLES"
+          />
           <ArticlesCard
             date={"Sep 30, 2024"}
             title={"How to prepare a delicious gluten-free sushi"}
