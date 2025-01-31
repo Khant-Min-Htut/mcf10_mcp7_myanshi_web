@@ -24,7 +24,7 @@ const HeroSection = ({
       <section className="flex items-center relative">
         {/* background image */}
         {isHomePage ? (
-          <div className=" overflow-hidden h-screen w-full">
+          <div className=" overflow-hidden h-screen w-full max-h-[1020px]">
             <img
               src={HeroSectionImg}
               alt="Hero Section"
@@ -42,42 +42,44 @@ const HeroSection = ({
         )}
 
         <div
-          className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center w-full max-w-[1200px] flex flex-col gap-6 
-            max-[843px]:gap-4 justify-center items-center ${
+          className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center w-full max-w-[1200px] flex flex-col 
+            max-[1020px]:gap-4 justify-center items-center ${
               isHomePage &&
               "max-[400px]:justify-start max-[400px]:text-start max-[400px]:items-start"
             } max-sm:px-2 ${
             isContactPage &&
-            " ps-12 min-[843px]:justify-start min-[843px]:text-start min-[843px]:items-start"
+            " ps-12 min-[1020px]:justify-start min-[1020px]:text-start min-[1020px]:items-start"
           }`}
         >
-          {isHomePage && (
-            <h1 className=" text-primary-color font-satoshi text-bodyLarge max-[400px]:text-bodyLargeDefault max-[400px]:text-start max-[400px]:w-full ">
-              ミャンマーへようこそ
+          <div className=" flex flex-col gap-4 max-sm:gap-2">
+            {isHomePage && (
+              <h1 className=" text-primary-color font-satoshi text-bodyLarge max-[400px]:text-bodyLargeDefault max-[400px]:text-start max-[400px]:w-full ">
+                ミャンマーへようこそ
+              </h1>
+            )}
+
+            {isBreadCrumb && (
+              <BreadCrumb currentPage={currentPage} links={links} />
+            )}
+
+            <h1
+              className={` font-notoSerifJp text-neutral-100 font-light  text-display1 max-[1020px]:text-display3 max-sm:text-heading1 max-sm:w-full ${
+                isContactPage && "max-[1105px]:text-display3  "
+              }`}
+            >
+              {title}
             </h1>
-          )}
-
-          {isBreadCrumb && (
-            <BreadCrumb currentPage={currentPage} links={links} />
-          )}
-
-          <h1
-            className={` font-notoSerifJp text-neutral-100 font-light  text-display1 max-[834px]:text-display3 max-sm:text-heading1 max-sm:w-full ${
-              isContactPage && "max-[1105px]:text-display3  "
-            }`}
-          >
-            {title}
-          </h1>
+          </div>
 
           {isHomePage && (
             <>
-              <p className="text-neutral-100 lg:max-w-[700px] max-sm:text-bodySmall font-satoshi text-bodyDefault">
+              <p className="text-neutral-100 lg:max-w-[700px] max-sm:text-bodySmall font-satoshi text-bodyDefault mt-6 max-sm:gap-4">
                 Discover the artistry of sushi at its finest. From fresh
                 ingredients to time-honored techniques, every dish is crafted to
                 delight your senses. Indulge in a journey of authentic flavors
                 and modern twists, only at MYANSHI.
               </p>
-              <div className=" flex mx-auto gap-4 max-[400px]:flex-col max-[400px]:w-full max-[400px]:text-bodyDefault ">
+              <div className=" flex mx-auto gap-6 mt-12 max-sm:gap-10 max-[400px]:flex-col max-[400px]:w-full max-[400px]:text-bodyDefault ">
                 <Link to="/contact">
                   <SolidBtn
                     text="Order Now"
@@ -94,7 +96,7 @@ const HeroSection = ({
                   }
                 />
               </div>
-              <div className="max-sm:w-full flex justify-center mt-[10px]">
+              <div className="max-sm:w-full flex justify-center mt-24 max-sm:mt-20">
                 <AnimatedButton sectionName="BrowseMenuSection" />
               </div>
             </>
@@ -103,13 +105,13 @@ const HeroSection = ({
 
         {/* contact card  */}
         {isContactPage && (
-          <div className="absolute bottom-0 right-[30%] max-[843px]:right-1/2 transform translate-x-1/2 translate-y-1/2 max-[843px]:translate-y-[90%] max-[660px]:translate-y-[95%]  w-full max-w-[626px] max-[1200px]:max-w-[506px] max-[843px]:max-w-[626px] max-[643px]:px-4">
+          <div className="absolute bottom-0 right-[30%] max-[1020px]:right-1/2 transform translate-x-1/2 translate-y-1/2 max-[1020px]:translate-y-[90%] max-[660px]:translate-y-[95%]  w-full max-w-[626px] max-[1200px]:max-w-[506px] max-[1020px]:max-w-[626px] max-[643px]:px-4">
             <ContactCard />
           </div>
         )}
       </section>
       {isContactPage && (
-        <div className=" h-[400px] w-full max-[843px]:h-[900px]"></div>
+        <div className=" h-[400px] w-full max-[1020px]:h-[900px]"></div>
       )}
     </>
   );

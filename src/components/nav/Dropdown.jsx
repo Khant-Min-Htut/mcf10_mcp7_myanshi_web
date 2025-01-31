@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import SushiIcon from "../../Icon/SushiIcon";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import CallNowBtn from "../../buttons/CallNowBtn";
 
 const Dropdown = () => {
@@ -9,11 +9,14 @@ const Dropdown = () => {
   const dropdownRef = useRef(null);
 
   const handleClickOutside = (e) => {
-    if (ref.current && !ref.current.contains(e.target) && !dropdownRef.current.contains(e.target)) {
+    if (
+      ref.current &&
+      !ref.current.contains(e.target) &&
+      !dropdownRef.current.contains(e.target)
+    ) {
       setIsOpen(false);
     }
   };
-
 
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
@@ -28,9 +31,9 @@ const Dropdown = () => {
         <div className="flex  items-center justify-between z-50  w-full h-full">
           <div className="flex items-center gap-2 z-50">
             <span>
-              <Link to="/" className=" w-32">
+              <NavLink to="/" className=" w-32">
                 <SushiIcon />
-              </Link>
+              </NavLink>
             </span>
             <span className="font-notoSerifJp text-white text-heading3 font-black">
               MYANSHI
@@ -77,39 +80,64 @@ const Dropdown = () => {
           </button>
 
           <div className="max-md:hidden flex items-center lg:space-x-10 md:space-x-5 mr-4">
-            <Link
+            <NavLink
               to="/"
-              className="font-satoshi text-heading4 relative text-white after:content-[''] after:absolute after:left-0 after:-bottom-1.5 after:h-[2px] after:w-0 after:bg-red-500 after:transition-all hover:after:w-full"
+              className={({ isActive }) =>
+                `font-satoshi text-heading4 relative text-white 
+    after:content-[''] after:absolute after:left-0 after:-bottom-1.5 
+    after:h-[2px] after:bg-red-500 after:transition-all 
+    after:w-0 hover:after:w-full ${isActive ? "after:w-full" : ""}`
+              }
             >
               HOME
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               to="/about"
-              className="font-satoshi text-heading4 relative text-white after:content-[''] after:absolute after:left-0 after:-bottom-1.5 after:h-[2px] after:w-0 after:bg-red-500 after:transition-all hover:after:w-full"
+              className={({ isActive }) =>
+                `font-satoshi text-heading4 relative text-white 
+    after:content-[''] after:absolute after:left-0 after:-bottom-1.5 
+    after:h-[2px] after:bg-red-500 after:transition-all 
+    after:w-0 hover:after:w-full ${isActive ? "after:w-full" : ""}`
+              }
             >
               ABOUT
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               to="/menu"
-              className="font-satoshi text-heading4 relative text-white after:content-[''] after:absolute after:left-0 after:-bottom-1.5 after:h-[2px] after:w-0 after:bg-red-500 after:transition-all hover:after:w-full"
+              className={({ isActive }) =>
+                `font-satoshi text-heading4 relative text-white 
+    after:content-[''] after:absolute after:left-0 after:-bottom-1.5 
+    after:h-[2px] after:bg-red-500 after:transition-all 
+    after:w-0 hover:after:w-full ${isActive ? "after:w-full" : ""}`
+              }
             >
               MENU
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               to="/contact"
-              className="font-satoshi text-heading4 relative text-white after:content-[''] after:absolute after:left-0 after:-bottom-1.5 after:h-[2px] after:w-0 after:bg-red-500 after:transition-all hover:after:w-full"
+              className={({ isActive }) =>
+                `font-satoshi text-heading4 relative text-white 
+    after:content-[''] after:absolute after:left-0 after:-bottom-1.5 
+    after:h-[2px] after:bg-red-500 after:transition-all 
+    after:w-0 hover:after:w-full ${isActive ? "after:w-full" : ""}`
+              }
             >
               CONTACT
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               to="/blog"
-              className="font-satoshi text-heading4 relative text-white after:content-[''] after:absolute after:left-0 after:-bottom-1.5 after:h-[2px] after:w-0 after:bg-red-500 after:transition-all hover:after:w-full"
+              className={({ isActive }) =>
+                `font-satoshi text-heading4 relative text-white 
+    after:content-[''] after:absolute after:left-0 after:-bottom-1.5 
+    after:h-[2px] after:bg-red-500 after:transition-all 
+    after:w-0 hover:after:w-full ${isActive ? "after:w-full" : ""}`
+              }
             >
               BLOG
-            </Link>
-            <Link to="/contact">
+            </NavLink>
+            <NavLink to="/contact">
               <CallNowBtn text="CALL NOW" />
-            </Link>
+            </NavLink>
           </div>
         </div>
       </nav>
@@ -120,42 +148,42 @@ const Dropdown = () => {
         } duration-300  left-0 top-14 px-2`}
       >
         <div className="lg:hidden mt-6 mb-6 space-y-6 z-20">
-          <Link
+          <NavLink
             to="/"
             onClick={() => setIsOpen(false)}
             className="block font-satoshi text-heading4 relative text-white after:content-[''] after:absolute after:left-0 after:-bottom-1.5 after:h-[2px] after:w-0 after:bg-red-500 after:transition-all hover:after:w-14"
           >
             HOME
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="/about"
             onClick={() => setIsOpen(false)}
             className="block font-satoshi text-heading4 relative text-white after:content-[''] after:absolute after:left-0 after:-bottom-1.5 after:h-[2px] after:w-0 after:bg-red-500 after:transition-all hover:after:w-16"
           >
             ABOUT
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="/menu"
             onClick={() => setIsOpen(false)}
             className="block font-satoshi text-heading4 relative text-white after:content-[''] after:absolute after:left-0 after:-bottom-1.5 after:h-[2px] after:w-0 after:bg-red-500 after:transition-all hover:after:w-14"
           >
             MENU
-          </Link>
+          </NavLink>
 
-          <Link
+          <NavLink
             to="/contact"
             onClick={() => setIsOpen(false)}
             className="block font-satoshi text-heading4 relative text-white after:content-[''] after:absolute after:left-0 after:-bottom-1.5 after:h-[2px] after:w-0 after:bg-red-500 after:transition-all hover:after:w-20"
           >
             CONTACT
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="/blog"
             onClick={() => setIsOpen(false)}
             className="block font-satoshi text-heading4 relative text-white after:content-[''] after:absolute after:left-0 after:-bottom-1.5 after:h-[2px] after:w-0 after:bg-red-500 after:transition-all hover:after:w-12"
           >
             BLOG
-          </Link>
+          </NavLink>
           <CallNowBtn text="CALL NOW" phoneNumber="09784224472" />
         </div>
       </div>
