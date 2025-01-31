@@ -24,7 +24,7 @@ const HeroSection = ({
       <section className="flex items-center relative">
         {/* background image */}
         {isHomePage ? (
-          <div className=" overflow-hidden h-screen w-full max-h-[1020px]">
+          <div className=" overflow-hidden h-screen w-full max-h-[1000px]">
             <img
               src={HeroSectionImg}
               alt="Hero Section"
@@ -63,7 +63,7 @@ const HeroSection = ({
             )}
 
             <h1
-              className={` font-notoSerifJp text-neutral-100 font-light  text-display1 max-[1020px]:text-display3 max-sm:text-heading1 max-sm:w-full ${
+              className={` font-notoSerifJp text-neutral-100 font-light  text-display1 max-[1050px]:text-display3 max-sm:text-heading1 max-sm:w-full ${
                 isContactPage && "max-[1105px]:text-display3  "
               }`}
             >

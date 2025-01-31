@@ -30,6 +30,7 @@ const BrowseMenuSection = () => {
                     "Discover our selection of authentic Japanese flavors, from fresh sushi to savory dishes, refreshing drinks, and delightful desserts."
                   }
                   buttonText={"SEE MORE"}
+                  isBrowse
                 />
                 {/* <div className=" col-span-1 flex flex-col gap-6 ">
                   <JapaneseText>メニュー</JapaneseText>
@@ -55,7 +56,7 @@ const BrowseMenuSection = () => {
                           <div className=" h-full flex items-start pt-1 min-w-[43px]">
                             <img src={SushiIcon} alt="" className=" w-[43px]" />
                           </div>
-                          <div>
+                          <div className=" flex flex-col gap-2">
                             <SecondaryHeader>{i.title}</SecondaryHeader>
                             <Paragraph>{i.description}</Paragraph>
                           </div>

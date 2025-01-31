@@ -10,18 +10,19 @@ import JapaneseText from "../typography/JapaneseText";
 import PrimaryHeader from "../typography/PrimaryHeader";
 import tiktokLogoFill from "../../assets/MyanShi/OurTitok/tiktok-logo-fill.svg";
 import SectionContainer from "../SectionContainer";
+import Content1 from "../typography/Content1";
 
 const TiktokSection = () => {
   return (
     <SectionContainer>
       <Container>
-        <div className=" h-full w-full  flex flex-col justify-center items-center gap-10">
+        <div className=" h-full w-full  flex flex-col justify-center items-center gap-12">
           <div className=" text-center flex flex-col gap-6 ">
             <JapaneseText>カスタマーレビュー</JapaneseText>
             <PrimaryHeader>Our Tiktok</PrimaryHeader>
           </div>
 
-          <div className="grid grid-cols-2  gap-2 max-[650px]:grid-cols-1 ">
+          <div className="grid grid-cols-2  gap-6 max-[650px]:grid-cols-1 ">
             <div className="col-span-1 max-[500px]:col-span-2 relative group ">
               <img
                 src={Img1}
@@ -29,14 +30,18 @@ const TiktokSection = () => {
                 className="w-full object-cover hover:cursor-pointer"
               />
               <div className=" absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50">
-              <img src={tiktokLogoFill} alt="" className="z-50 text-6xl text-white transform -rotate-12 group-hover:rotate-0 transition-all duration-500 opacity-0 group-hover:opacity-100  size-14"/>
+                <img
+                  src={tiktokLogoFill}
+                  alt=""
+                  className="z-50 text-6xl text-white transform -rotate-12 group-hover:rotate-0 transition-all duration-500 opacity-0 group-hover:opacity-100  size-14"
+                />
               </div>
               <div
                 // href="#"
                 className=" absolute w-full h-full top-0 left-0 opacity-0 z-10 bg-neutral-800 transition-opacity duration-300 group-hover:opacity-50 "
               ></div>
             </div>
-            <div className=" grid grid-cols-2 gap-2 col-span-1 max-[500px]:col-span-2">
+            <div className=" grid grid-cols-2 gap-6 col-span-1 max-[500px]:col-span-2">
               {[Img2, Img3, Img4, Img5].map((img, index) => (
                 <div
                   key={index}
@@ -48,8 +53,11 @@ const TiktokSection = () => {
                     alt={`Image ${index + 1}`}
                   />
                   <div className=" absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50">
-                 
-                    <img src={tiktokLogoFill} alt="" className="z-50 text-6xl text-white transform -rotate-12 group-hover:rotate-0 transition-all duration-500 opacity-0 group-hover:opacity-100  size-14"/>
+                    <img
+                      src={tiktokLogoFill}
+                      alt=""
+                      className="z-50 text-6xl text-white transform -rotate-12 group-hover:rotate-0 transition-all duration-500 opacity-0 group-hover:opacity-100  size-14"
+                    />
                   </div>
                   <div
                     // href="#"

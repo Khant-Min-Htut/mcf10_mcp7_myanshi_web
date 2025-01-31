@@ -12,6 +12,7 @@ import PrimaryHeader from "../../../components/typography/PrimaryHeader";
 import Paragraph from "../../../components/typography/Paragraph";
 import SectionContainer from "../../../components/SectionContainer";
 import { useNavigate } from "react-router-dom";
+import Content1 from "../../../components/typography/Content1";
 
 const PromotionsSection = () => {
   const nav = useNavigate();
@@ -19,7 +20,7 @@ const PromotionsSection = () => {
     <SectionContainer>
       <Container>
         <div className=" flex flex-col gap-12 my-16 max-[1200px]:px-2">
-          <div className=" w-full col-span-1 flex flex-col gap-6 ">
+          {/* <div className=" w-full col-span-1 flex flex-col gap-6 ">
             <JapaneseText>プロモーション</JapaneseText>
             <PrimaryHeader>Christmas Promotion</PrimaryHeader>
             <Paragraph>
@@ -27,7 +28,14 @@ const PromotionsSection = () => {
               25th to 31th. Enjoy festive deals and limited-time offers!
             </Paragraph>
             <SolidBtn onClick={() => nav("/menu")} text="SEE ALL" />
-          </div>
+          </div> */}
+          <Content1
+            title="Christmas Promotion"
+            japanesText="プロモーション"
+            text="Celebrate the holiday season with our Christmas promotion from
+              25th to 31th. Enjoy festive deals and limited-time offers!"
+            buttonText="SEE ALL"
+          />
           <Carousel menuItems={cardData} showData={10} />
         </div>
       </Container>

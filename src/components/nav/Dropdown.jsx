@@ -128,9 +128,9 @@ const Dropdown = () => {
               to="/blog"
               className={({ isActive }) =>
                 `font-satoshi text-heading4 relative text-white 
-    after:content-[''] after:absolute after:left-0 after:-bottom-1.5 
-    after:h-[2px] after:bg-red-500 after:transition-all 
-    after:w-0 hover:after:w-full ${isActive ? "after:w-full" : ""}`
+      after:content-[''] after:absolute after:left-0 after:-bottom-1.5 
+      after:h-[2px] after:bg-red-500 after:transition-all 
+      after:w-0 hover:after:w-full ${isActive ? "after:w-full" : ""}`
               }
             >
               BLOG
@@ -151,21 +151,33 @@ const Dropdown = () => {
           <NavLink
             to="/"
             onClick={() => setIsOpen(false)}
-            className="block font-satoshi text-heading4 relative text-white after:content-[''] after:absolute after:left-0 after:-bottom-1.5 after:h-[2px] after:w-0 after:bg-red-500 after:transition-all hover:after:w-14"
+            className={({ isActive }) =>
+              `block font-satoshi text-heading4 relative text-white after:content-[''] after:absolute after:left-0 after:-bottom-1.5 after:h-[2px] after:w-0 after:bg-red-500 after:transition-all hover:after:w-14 ${
+                isActive ? "after:w-14" : ""
+              }`
+            }
           >
             HOME
           </NavLink>
           <NavLink
             to="/about"
             onClick={() => setIsOpen(false)}
-            className="block font-satoshi text-heading4 relative text-white after:content-[''] after:absolute after:left-0 after:-bottom-1.5 after:h-[2px] after:w-0 after:bg-red-500 after:transition-all hover:after:w-16"
+            className={({ isActive }) =>
+              `block font-satoshi text-heading4 relative text-white after:content-[''] after:absolute after:left-0 after:-bottom-1.5 after:h-[2px] after:w-0 after:bg-red-500 after:transition-all hover:after:w-16 ${
+                isActive ? "after:w-16" : ""
+              }`
+            }
           >
             ABOUT
           </NavLink>
           <NavLink
             to="/menu"
             onClick={() => setIsOpen(false)}
-            className="block font-satoshi text-heading4 relative text-white after:content-[''] after:absolute after:left-0 after:-bottom-1.5 after:h-[2px] after:w-0 after:bg-red-500 after:transition-all hover:after:w-14"
+            className={({ isActive }) =>
+              `block font-satoshi text-heading4 relative text-white after:content-[''] after:absolute after:left-0 after:-bottom-1.5 after:h-[2px] after:w-0 after:bg-red-500 after:transition-all hover:after:w-14 ${
+                isActive ? "after:w-14" : ""
+              }`
+            }
           >
             MENU
           </NavLink>
@@ -173,14 +185,22 @@ const Dropdown = () => {
           <NavLink
             to="/contact"
             onClick={() => setIsOpen(false)}
-            className="block font-satoshi text-heading4 relative text-white after:content-[''] after:absolute after:left-0 after:-bottom-1.5 after:h-[2px] after:w-0 after:bg-red-500 after:transition-all hover:after:w-20"
+            className={({ isActive }) =>
+              `block font-satoshi text-heading4 relative text-white after:content-[''] after:absolute after:left-0 after:-bottom-1.5 after:h-[2px] after:w-0 after:bg-red-500 after:transition-all hover:after:w-16 ${
+                isActive ? "after:w-16" : ""
+              }`
+            }
           >
             CONTACT
           </NavLink>
           <NavLink
             to="/blog"
             onClick={() => setIsOpen(false)}
-            className="block font-satoshi text-heading4 relative text-white after:content-[''] after:absolute after:left-0 after:-bottom-1.5 after:h-[2px] after:w-0 after:bg-red-500 after:transition-all hover:after:w-12"
+            className={({ isActive }) =>
+              `block font-satoshi text-heading4 relative text-white after:content-[''] after:absolute after:left-0 after:-bottom-1.5 after:h-[2px] after:w-0 after:bg-red-500 after:transition-all hover:after:w-14 ${
+                isActive ? "after:w-14" : ""
+              }`
+            }
           >
             BLOG
           </NavLink>
