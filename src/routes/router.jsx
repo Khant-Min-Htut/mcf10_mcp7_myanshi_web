@@ -1,4 +1,3 @@
-// src/routes/router.jsx
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "../components/Layout";
 import Home from "../features/home/pages/Home";
@@ -8,6 +7,8 @@ import Contact from "../features/contact/pages/Contact";
 import Blog from "../features/blog/pages/Blog";
 import DetailBlog from "../features/detail-blog/pages/DetailBlog";
 import NotFound from "../features/notfound/NotFound";
+import AuthRoute from "./dashboardRout/AuthRoute"; // Ensure path is correct
+import { DashBoardRouts } from "./dashboardRout/DashBoardRouts";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,9 @@ const router = createBrowserRouter([
       { path: "*", element: <NotFound /> },
     ],
   },
+  // Include authentication routes separately
+  ...AuthRoute,
+  ...DashBoardRouts
 ]);
 
 export default router;
