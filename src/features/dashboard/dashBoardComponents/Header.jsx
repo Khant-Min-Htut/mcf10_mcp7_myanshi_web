@@ -1,17 +1,24 @@
 import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import useStore from "../../../store";
+// import img from "../../../assets/MyanShi/Menu/MigiriSushi.jpg";
+import testAvatar1 from "../../../assets/MyanShi/Avatar/testAvatar1.png";
+
 const Header = ({ pageName }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const { isDrawerOpen, setIsDrawerOpen, isDesktopSize } = useStore();
+  useStore();
+  //  console.log(" I am desktop size",isDesktopSize)
+  console.log("isDrawerOpen", isDrawerOpen);
   const dropdownRef = useRef(null);
   return (
-    <div className=" h-[88px] w-full  flex justify-between items-center bg-red-300">
+    <div className=" h-[88px] w-full max-w-screen  flex justify-between items-center max-md:px-2">
       <button
         ref={dropdownRef}
-        className="block md:hidden text-black focus:outline-none z-50"
+        className="block md:hidden  text-black focus:outline-none z-50"
       >
-        {isOpen ? (
+        {isDrawerOpen ? (
           <svg
-            onClick={() => setIsOpen(false)}
+            onClick={() => setIsDrawerOpen(false)}
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
@@ -27,7 +34,7 @@ const Header = ({ pageName }) => {
           </svg>
         ) : (
           <svg
-            onClick={() => setIsOpen(true)}
+            onClick={() => setIsDrawerOpen(true)}
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
@@ -44,10 +51,15 @@ const Header = ({ pageName }) => {
         )}
       </button>
 
-      <h1>{pageName}</h1>
-      <Link to="/dashboard/profile" className="flex gap-2 items-center">
-        <img src="//" alt="??" />
-        <h1>Kyaw Kyaw</h1>
+      <h1 className=" text-heading3_500 font-bold">{pageName}</h1>
+
+      <Link to="/dashboard/profile" className="flex items-center gap-4">
+        <img className="w-10 h-10 rounded-full" src={testAvatar1} />
+        <div>
+          <h1 className=" font-satoshi text-bodyExtraLarge max-sm:text-[18px] text-neutral-800">
+            User One
+          </h1>
+        </div>
       </Link>
     </div>
   );
