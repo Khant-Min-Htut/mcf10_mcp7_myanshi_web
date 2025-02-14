@@ -6,6 +6,9 @@ export default {
       sans: ["Inter", "Padauk", "sans-serif"],
     },
     extend: {
+      screens: {
+        'xs': '500px',
+      },
       fontFamily: {
         satoshi: ["Satoshi", "sans-serif"],
         notoSerifJp: ["Noto Serif", "serif"],

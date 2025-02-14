@@ -5,9 +5,11 @@ import DashboardCards from "./DashboardCards";
 
 const DashBoardPage = () => {
   return (
-    <div >
-      <Header pageName="Dashboard"/>
-      <DashboardCards/>
+    <div className=" w-full">
+      <Header pageName="Dashboard" />
+      <div className=" overflow-hidden ">
+        <DashboardCards />
+      </div>
       <Table />
     </div>
   );
