@@ -7,7 +7,7 @@ const useStore = create((set) => ({
   isDesktopSize: true,
   setIsDrawerOpen: () =>
     set((state) => ({ isDrawerOpen: !state.isDrawerOpen })),
-  setIsDesktopSize: () => set({ isDesktopSize: window.innerWidth >= 768 }),
+  setIsDesktopSize: () => set({ isDesktopSize: window.innerWidth >= 990 }),
 }));
 
 export default useStore;

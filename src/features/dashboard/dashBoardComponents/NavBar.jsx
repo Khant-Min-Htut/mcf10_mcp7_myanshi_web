@@ -3,6 +3,8 @@ import { path } from "framer-motion/client";
 import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import useStore from "../../../store";
+import SushiIcon from "../../../Icon/SushiIcon";
+import { Camera, ForkKnife, GearSix, GpsFix, House, PencilLine, SealPercent, SealQuestion, Star, Tag, User, VectorThree } from "@phosphor-icons/react";
 
 const NavBar = () => {
   const { isDrawerOpen, isDesktopSize, setIsDrawerOpen } = useStore();
@@ -18,9 +20,12 @@ const NavBar = () => {
       {/* Top Section */}
       <div className=" relative">
         {/* Brand/Logo */}
-        <h1 className="text-white text-center text-2xl font-bold mb-8">
+       <div className=" flex gap-2 justify-center items-center mb-8">
+       <SushiIcon/>
+        <h1 className="text-white text-center text-2xl font-bold">
           MYANSHI
         </h1>
+       </div>
 
         {!isDesktopSize && (
           <div className=" absolute top-2 right-2">
@@ -48,7 +53,7 @@ const NavBar = () => {
             <NavLink
               key={id}
               to={path}
-              className="flex items-center w-[280px] h-[72px] px-4 gap-[10px] text-white hover:bg-[#1A1A1A]"
+              className="flex items-center ps-[90px] w-[280px] h-[72px] px-4 gap-[10px]  text-white hover:bg-[#1A1A1A]"
             >
               {/* Replace '//' with actual icon source or import your icons */}
               <span>{icon}</span>
@@ -74,61 +79,67 @@ export default NavBar;
 const navData = [
   {
     id: 1,
-    icon: "//",
+    icon: <House size={16} color="#ffffff" />,
     name: "Dashboard",
     path: "/dashboard",
   },
   {
     id: 2,
-    icon: "//",
+    icon: <Tag size={16} color="#ffffff" />,
     name: "Category",
     path: "/dashboard/category",
   },
   {
     id: 3,
-    icon: "//",
+    icon:  <ForkKnife size={16} color="#ffffff" />,
     name: "Promotions",
     path: "/promotions",
   },
   {
     id: 4,
-    icon: "//",
+    icon: <SealPercent size={16} color="#ffffff" />,
     name: "Blog",
     path: "/dashboard/blog",
   },
   {
     id: 5,
-    icon: "//",
+    icon: <PencilLine size={16} color="#ffffff" />,
     name: "Author",
     path: "/",
   },
   {
     id: 6,
-    icon: "//",
+    icon: <User size={16} color="#ffffff" />,
     name: "Gallery",
     path: "/",
   },
   {
     id: 7,
-    icon: "//",
+    icon: <Camera size={16} color="#ffffff" />,
     name: "FAQ",
     path: "/",
   },
   {
     id: 8,
-    icon: "//",
+    icon: <SealQuestion size={16} color="#ffffff" />,
     name: "Review",
     path: "/",
   },
   {
     id: 9,
-    icon: "//",
+    icon: <Star size={16} color="#ffffff" />,
     name: "Location",
     path: "/",
   },
   {
     id: 10,
-    icon: "//",
+    icon: <GpsFix size={16} color="#ffffff" />,
+    name: "Location",
+    path: "/",
+  },
+  {
+    id: 11,
+    icon: <GearSix size={16} color="#ffffff" />,
     name: "Profile",
     path: "/",
   },

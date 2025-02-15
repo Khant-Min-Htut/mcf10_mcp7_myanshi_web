@@ -11,10 +11,10 @@ const Header = ({ pageName }) => {
   console.log("isDrawerOpen", isDrawerOpen);
   const dropdownRef = useRef(null);
   return (
-    <div className=" h-[88px] w-full max-w-screen  flex justify-between items-center max-md:px-2">
+    <div className=" h-[88px] w-full max-w-screen  flex justify-between items-center max-[990px]:px-[10px] mb-6">
       <button
         ref={dropdownRef}
-        className="block md:hidden  text-black focus:outline-none z-50"
+        className="block min-[990px]:hidden  text-black focus:outline-none z-50"
       >
         {isDrawerOpen ? (
           <svg
@@ -51,12 +51,12 @@ const Header = ({ pageName }) => {
         )}
       </button>
 
-      <h1 className=" text-heading3_500 font-bold">{pageName}</h1>
+      <h1 className="  font-satoshi  text-cardTitle font-bold">{pageName}</h1>
 
-      <Link to="/dashboard/profile" className="flex items-center gap-4">
+      <Link to="/dashboard/profile" className="flex items-center gap-2">
         <img className="w-10 h-10 rounded-full" src={testAvatar1} />
         <div>
-          <h1 className=" font-satoshi text-bodyExtraLarge max-sm:text-[18px] text-neutral-800">
+          <h1 className="  text-bodySmall font-satoshi max-sm:text-[18px] text-neutral-800 ">
             User One
           </h1>
         </div>
