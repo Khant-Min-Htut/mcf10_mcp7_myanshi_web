@@ -93,7 +93,7 @@ const navData = [
     id: 3,
     icon:  <ForkKnife size={16} color="#ffffff" />,
     name: "Promotions",
-    path: "/promotions",
+    path: "/dashboard/promotions",
   },
   {
     id: 4,

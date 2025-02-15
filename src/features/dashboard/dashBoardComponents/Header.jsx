@@ -1,17 +1,17 @@
 import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import useStore from "../../../store";
-// import img from "../../../assets/MyanShi/Menu/MigiriSushi.jpg";
 import testAvatar1 from "../../../assets/MyanShi/Avatar/testAvatar1.png";
 
 const Header = ({ pageName }) => {
   const { isDrawerOpen, setIsDrawerOpen, isDesktopSize } = useStore();
   useStore();
-  //  console.log(" I am desktop size",isDesktopSize)
   console.log("isDrawerOpen", isDrawerOpen);
   const dropdownRef = useRef(null);
   return (
-    <div className=" h-[88px] w-full max-w-screen  flex justify-between items-center max-[990px]:px-[10px] mb-6">
+    <div
+      className={` h-[88px] w-full max-w-screen  flex justify-between items-center max-[990px]:px-[10px] mb-6 `}
+    >
       <button
         ref={dropdownRef}
         className="block min-[990px]:hidden  text-black focus:outline-none z-50"

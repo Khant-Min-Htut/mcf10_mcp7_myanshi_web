@@ -3,6 +3,7 @@ import DashBoardPage from "../../features/dashboard/dashBoardFeatures/dashBoard/
 import DashBoardLayout from "../../features/dashboard/DashBoardLayout";
 import CategoryRoute from "./CategoryRout";
 import BlogRoute from "./BlogRoute";
+import PromotionRoute from "./PromotionRout";
 
 export const DashBoardRouts=[
     {
@@ -19,6 +20,7 @@ export const DashBoardRouts=[
             },
             ...CategoryRoute,
             ...BlogRoute,
+            ...PromotionRoute
         ]
       },
 ]

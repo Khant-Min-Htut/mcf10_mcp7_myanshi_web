@@ -4,7 +4,8 @@ const TableActions = ({ onDelete, onEdit }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   return (
-    <td className="h-16 px-4 max-[1023px]:px-1 border-collapse border-t relative">
+    <div className=" text-end">
+      {/* className="h-16 px-4 max-[1023px]:px-1 border-collapse border-t relative" */}
       {/* Visible on large screens */}
       <button
         onClick={onDelete}
@@ -60,7 +61,7 @@ const TableActions = ({ onDelete, onEdit }) => {
           </div>
         )}
       </div>
-    </td>
+    </div>
   );
 };
 
