@@ -8,7 +8,7 @@ const AuthRoute = [
   {
     path: "login",
     element: (
-      <Suspense fallback={<h1>I am Loading</h1>}>
+      <Suspense fallback={<h1>I am Loading.</h1>}>
         <LoginPage />
       </Suspense>
     ),
