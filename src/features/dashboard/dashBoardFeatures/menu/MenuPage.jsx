@@ -1,29 +1,24 @@
 import React from "react";
 import Header from "../../dashBoardComponents/Header";
-import EmptyState from "../../dashBoardComponents/EmptyState";
 import Table from "../../dashBoardComponents/Table";
-import Card from "../../dashBoardComponents/Card";
-import useStore from "../../../../store";
 
-const CategoryPage = () => {
+const MenuPage = () => {
   return (
-    <div className=" w-full flex flex-col items-center justify-center relative">
-      <Header pageName="Category Overview" />
+    <div className=" w-full ">
+      <Header pageName="Menu Overview" />
       <Table
         columns={columns}
         menuItems={menuItems}
         checkBox={true}
-        currentPage={"Category"}
-        addedPath={"/dashboard/category/add-new"}
-        currentUrl={"/dashboard/category"}
+        currentPage={"Menu"}
       />
     </div>
   );
 };
 
-export default CategoryPage;
+export default MenuPage;
 
-const columns = ["Category", "Created at", "Actions"]; // Dynamically define column names
+const columns = ["Menu", "Category", "Price (MMK)", "Created at", "Actions"]; // Updated columns
 
 const menuItems = [
   {

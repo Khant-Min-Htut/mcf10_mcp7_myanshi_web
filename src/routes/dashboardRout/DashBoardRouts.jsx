@@ -4,6 +4,13 @@ import DashBoardLayout from "../../features/dashboard/DashBoardLayout";
 import CategoryRoute from "./CategoryRout";
 import BlogRoute from "./BlogRoute";
 import PromotionRoute from "./PromotionRout";
+import AuthorRoute from "./AuthorRoute";
+import GalleryRoute from "./GalleryPageRoute";
+import FAQRoute from "./FAQRoute";
+import ReviewRoute from "./ReviewRoute";
+import LocationRoute from "./LocationRoute";
+import ProfileRoute from "./ProfileRoute";
+import MenuRoute from "./MenuRoute";
 
 export const DashBoardRouts=[
     {
@@ -20,7 +27,14 @@ export const DashBoardRouts=[
             },
             ...CategoryRoute,
             ...BlogRoute,
-            ...PromotionRoute
+            ...PromotionRoute,
+            ...AuthorRoute,
+            ...GalleryRoute,
+            ...FAQRoute,
+            ...ReviewRoute,
+            ...LocationRoute,
+            ...ProfileRoute,
+            ...MenuRoute
         ]
       },
 ]

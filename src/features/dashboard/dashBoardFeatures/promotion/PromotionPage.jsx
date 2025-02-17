@@ -5,8 +5,8 @@ import Table from "../../dashBoardComponents/Table";
 const PromotionPage = () => {
   return (
     <div className=" w-full ">
-      <Header pageName="Promotion" />
-      <Table columns={columns} menuItems={menuItems} checkBox={true} />
+      <Header pageName="Promotion Overview" />
+      <Table columns={columns} menuItems={menuItems} checkBox={true} currentPage={"Promotion"} />
     </div>
   );
 };

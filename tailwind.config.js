@@ -15,6 +15,7 @@ export default {
       },
       colors: {
         "primary-color": "#CE3319", // red
+        "primary-color-hover": "#B91C1C",
         "background-color": "#FDF5F4", // white
         "stroke-1-color": "#F8E2DE",
         "stroke-2-color": "#F4CEC8",

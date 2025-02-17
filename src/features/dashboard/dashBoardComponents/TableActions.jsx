@@ -14,7 +14,7 @@ const TableActions = ({ onDelete, onEdit }) => {
         Delete
       </button>
       <button
-        onClick={onEdit}
+        onClick={()=>onEdit()}
         className="bg-[#DCFCE7] text-[#22C55E] px-3 py-1 rounded max-[850px]:hidden"
       >
         Edit

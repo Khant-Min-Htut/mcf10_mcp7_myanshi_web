@@ -7,7 +7,6 @@ const DashBoardLayout = () => {
   const { isDrawerOpen, setIsDrawerOpen, setIsDesktopSize, isDesktopSize } =
     useStore();
 
-    console.log(" isafal;k;kaldf",isDesktopSize)
   const isOpen = isDesktopSize || isDrawerOpen;
 
   useEffect(() => {

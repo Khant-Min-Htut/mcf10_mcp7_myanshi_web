@@ -2,66 +2,69 @@ import React from 'react'
 import Header from '../../dashBoardComponents/Header'
 import Table from '../../dashBoardComponents/Table'
 
-const BlogPage = () => {
+const ReviewPage = () => {
   return (
     <div className=" w-full ">
-      <Header pageName="Blog Overview" />
-      <Table columns={columns} menuItems={menuItems} checkBox={true} currentPage={"Blog"} />
+      <Header pageName="Review Overview" />
+      <Table columns={columns} menuItems={menuItems} checkBox={true} currentPage={"Review"}/>
     </div>
   )
 }
 
-export default BlogPage
+export default ReviewPage
 
-const columns = ["Title", "Author", "Created at", "Actions"]; // Updated columns
+
+const columns = ["Customer Name", "Title", "Created at", "Actions"]; // Updated columns
 
 const menuItems = [
   {
     id: 1,
-    title: "Mastering Sushi Rolls", // Changed "name" to "title"
-    author: "Chef Yamamoto", // Added "author"
+    title: "Mastering Sushi Rolls",
+    customerName: "John Doe", // Real customer name
     date: "17 Sep 2024",
   },
   {
     id: 2,
     title: "The Art of Nigiri Sushi",
-    author: "Chef Suzuki",
+    customerName: "Alice Smith",
     date: "17 Sep 2024",
   },
   {
     id: 3,
     title: "Perfecting Togarashi Makis",
-    author: "Chef Tanaka",
+    customerName: "Michael Brown",
     date: "17 Sep 2024",
   },
   {
     id: 4,
     title: "Salmon Rolls: A Guide",
-    author: "Chef Nakamura",
+    customerName: "Emily Johnson",
     date: "17 Sep 2024",
   },
   {
     id: 5,
     title: "Matcha Tea and Desserts",
-    author: "Chef Fujimoto",
+    customerName: "David Wilson",
     date: "17 Sep 2024",
   },
   {
     id: 6,
     title: "Macarons: French Delight",
-    author: "Chef Pierre",
+    customerName: "Sophia Martinez",
     date: "17 Sep 2024",
   },
   {
     id: 7,
     title: "The Sweetness of Salmon Rolls",
-    author: "Chef Aoki",
+    customerName: "Daniel Lee",
     date: "17 Sep 2024",
   },
   {
     id: 8,
     title: "Vegetarian Ramen Recipes",
-    author: "Chef Miyazaki",
+    customerName: "Olivia Taylor",
     date: "17 Sep 2024",
   },
 ];
+
+

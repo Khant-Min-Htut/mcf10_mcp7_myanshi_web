@@ -1,3 +1,4 @@
+import { span } from "framer-motion/client";
 import TableActions from "./TableActions";
 
 import { CalendarX, Clock } from "@phosphor-icons/react";
@@ -32,8 +33,16 @@ const TableRow = ({ item, columns, onDelete, onEdit, checkBox }) => {
             <span>{item.originalPrice}</span>
           ) : col === "Category" ? (
             item.category
+          ) : col === "Customer Name" ? (
+            item.customerName
           ) : col === "Price (MMK)" ? (
             item.price
+          ) : col === "Full Address" ? (
+            <p className="w-[250px]">{item.fullAddress}</p>
+          ) : col === "Email" ? (
+            <p className="w-[150px] break-words">{item.email}</p>
+          ) : col === "Phone Number" ? (
+            <span >{item.phoneNumber}</span>
           ) : col === "Created at" ? (
             <div className="flex justify-start text-start flex-col">
               <span className="flex items-center gap-1 min-w-[120px]">
@@ -46,7 +55,7 @@ const TableRow = ({ item, columns, onDelete, onEdit, checkBox }) => {
               </span>
             </div>
           ) : (
-            item[col.toLowerCase()] || "N/A" // Dynamically render item values based on column name
+            item[col.toLowerCase()] || "Data not available"
           )}
         </td>
       ))}

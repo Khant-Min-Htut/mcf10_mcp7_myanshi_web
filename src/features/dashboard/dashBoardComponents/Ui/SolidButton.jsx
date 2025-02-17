@@ -2,17 +2,19 @@ import React from "react";
 
 const SolidButton = ({
   children,
-  color = "#3498db", // Default blue
-  hoverColor = "#2980b9", // Default darker blue
+  color = "primaryColor", // Default blue
+  hoverColor = "primary-color-hover", // Default darker blue
   size = "md",
   onClick,
   className = "",
+  type = "button",
 }) => {
   const isHex = color.startsWith("#");
   const isHoverHex = hoverColor.startsWith("#");
 
   // Predefined Tailwind color classes
   const tailwindColors = {
+    primaryColor: " bg-primary-color hover:bg-primary-color-hover",
     blue: "bg-blue-500 hover:bg-blue-600",
     red: "bg-red-500 hover:bg-red-600",
     green: "bg-green-500 hover:bg-green-600",
@@ -21,14 +23,17 @@ const SolidButton = ({
 
   return (
     <button
+      type={type}
       onClick={onClick}
       className={`
         rounded-lg font-medium transition-all duration-200 text-[#FAFAFA] shadow-md
-        ${{
-          sm: "px-3 py-1 text-sm",
-          md: "px-4 py-2 text-base",
-          lg: "px-5 py-3 text-lg",
-        }[size]}
+        ${
+          {
+            sm: "px-3 py-1 text-sm",
+            md: "px-4 py-2 text-base",
+            lg: "px-5 py-3 text-lg",
+          }[size]
+        }
         ${isHex ? "" : tailwindColors[color]} 
         ${className}
       `}

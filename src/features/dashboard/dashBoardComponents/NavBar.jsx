@@ -8,7 +8,6 @@ import { Camera, ForkKnife, GearSix, GpsFix, House, PencilLine, SealPercent, Sea
 
 const NavBar = () => {
   const { isDrawerOpen, isDesktopSize, setIsDrawerOpen } = useStore();
-  console.log("I am desktop", isDesktopSize);
 
   return (
     <div
@@ -91,56 +90,56 @@ const navData = [
   },
   {
     id: 3,
-    icon:  <ForkKnife size={16} color="#ffffff" />,
-    name: "Promotions",
-    path: "/dashboard/promotions",
+    icon: <ForkKnife size={16} color="#ffffff" />,
+    name: "Menu",
+    path: "/dashboard/menu",
   },
   {
     id: 4,
     icon: <SealPercent size={16} color="#ffffff" />,
-    name: "Blog",
-    path: "/dashboard/blog",
+    name: "Promotions",
+    path: "/dashboard/promotions",
   },
   {
     id: 5,
     icon: <PencilLine size={16} color="#ffffff" />,
-    name: "Author",
-    path: "/",
+    name: "Blog",
+    path: "/dashboard/blog",
   },
   {
     id: 6,
     icon: <User size={16} color="#ffffff" />,
-    name: "Gallery",
-    path: "/",
+    name: "Author",
+    path: "/dashboard/author",
   },
   {
     id: 7,
     icon: <Camera size={16} color="#ffffff" />,
-    name: "FAQ",
-    path: "/",
+    name: "Gallery",
+    path: "/dashboard/gallery",
   },
   {
     id: 8,
     icon: <SealQuestion size={16} color="#ffffff" />,
-    name: "Review",
-    path: "/",
+    name: "FAQ",
+    path: "/dashboard/faq",
   },
   {
     id: 9,
     icon: <Star size={16} color="#ffffff" />,
-    name: "Location",
-    path: "/",
+    name: "Review",
+    path: "/dashboard/review",
   },
   {
     id: 10,
     icon: <GpsFix size={16} color="#ffffff" />,
     name: "Location",
-    path: "/",
+    path: "/dashboard/location",
   },
   {
     id: 11,
     icon: <GearSix size={16} color="#ffffff" />,
     name: "Profile",
-    path: "/",
+    path: "/dashboard/profile",
   },
 ];

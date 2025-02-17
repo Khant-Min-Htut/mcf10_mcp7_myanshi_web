@@ -14,7 +14,7 @@ const PromotionRoute = [
     element: <AddNewPromotionPage />,
   },
   {
-    path: "promotions/edit",
+    path: "promotions/edit/:id",
     element: <EditPromotionPage />,
   },
 ];

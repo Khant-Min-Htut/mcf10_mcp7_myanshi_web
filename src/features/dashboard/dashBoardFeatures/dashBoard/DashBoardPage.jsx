@@ -10,7 +10,7 @@ const DashBoardPage = () => {
       <div className=" overflow-hidden mb-12 ">
         <DashboardCards />
       </div>
-      <Table columns={columns} menuItems={menuItems} checkBox={true} />
+      <Table columns={columns} menuItems={menuItems} checkBox={true} currentPage={"Dashboard"} />
     </div>
   );
 };
