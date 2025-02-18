@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
 import { lazy } from "react";
-import LocationPage from "../../features/dashboard/dashBoardFeatures/Location/LocationPage";
+import LocationPage from "../../features/dashboard/dashBoardFeatures/location/LocationPage";
 import AddNewLocationPage from "../../features/dashboard/dashBoardFeatures/location/AddNewLocationPage";
 import EditLocationPage from "../../features/dashboard/dashBoardFeatures/location/EditLocationPage";
 
@@ -11,7 +11,7 @@ const LocationRoute = [
   },
   {
     path: "location/add-new",
-    element: <AddNewLocationPage/>,
+    element: <AddNewLocationPage />,
   },
   {
     path: "location/edit",
