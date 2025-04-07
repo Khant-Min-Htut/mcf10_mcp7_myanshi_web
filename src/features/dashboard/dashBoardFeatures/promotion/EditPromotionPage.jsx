@@ -3,7 +3,7 @@ import Header from "../../dashBoardComponents/Header";
 import InputField from "../../dashBoardComponents/Ui/InputField";
 import OutlineButton from "../../dashBoardComponents/Ui/OutlineButton";
 import SolidButton from "../../dashBoardComponents/Ui/SolidButton";
-import { Plus } from "@phosphor-icons/react";
+/* import { Plus } from "@phosphor-icons/react"; */
 import { useNavigate } from "react-router-dom";
 const EditPromotionPage = () => {
   const nav = useNavigate();

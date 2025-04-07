@@ -144,7 +144,10 @@ const AuthForm = ({
             </button>
 
             {isForgotPasswordPage && (
-              <button children className="w-full border text-center items-center  text-[#18181B] h-10 rounded-md transition">
+              <button
+                children
+                className="w-full border text-center items-center  text-[#18181B] h-10 rounded-md transition"
+              >
                 <Link to={path}>Back to login</Link>
               </button>
             )}

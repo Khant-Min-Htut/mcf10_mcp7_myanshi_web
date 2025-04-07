@@ -1,4 +1,4 @@
-// TableHeader.jsx
+d; // TableHeader.jsx
 const TableHeader = ({ columns, checkBox }) => {
   return (
     <thead className="bg-[#FFFFFF]">

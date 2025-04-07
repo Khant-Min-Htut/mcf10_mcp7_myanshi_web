@@ -3,7 +3,7 @@ import Header from "../../dashBoardComponents/Header";
 import InputField from "../../dashBoardComponents/Ui/InputField";
 import OutlineButton from "../../dashBoardComponents/Ui/OutlineButton";
 import SolidButton from "../../dashBoardComponents/Ui/SolidButton";
-import { Plus } from "@phosphor-icons/react";
+/* import { Plus } from "@phosphor-icons/react"; */
 import { useNavigate } from "react-router-dom";
 
 const AddNewPromotionPage = () => {
@@ -36,16 +36,8 @@ const AddNewPromotionPage = () => {
               label="Original Price (MMK)"
               name="originalPrice"
             />
-            <InputField
-              type="date"
-              label="Start Date"
-              name="startDate"
-            />
-             <InputField
-              type="date"
-              label="End Date"
-              name="endDate"
-            />
+            <InputField type="date" label="Start Date" name="startDate" />
+            <InputField type="date" label="End Date" name="endDate" />
           </div>
         </div>
         <div className="flex gap-4 ms-auto">
